@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "image": "https://img.fantaskycdn.com/4860b0a3e5be18ea3f354e9f4be82072_1080x.png",
+        "title": "Grand Lake COLORADO",
+        "price": 240
+    },
+    {
+        "id":2,
+        "image": "https://img.fantaskycdn.com/c99b6811340f15f521fc433309feea56_1080x.jpeg",
+        "title": "Grand Lake COLORADO",
+        "price": 220
+    },
+    {
+        "id":3,
+        "image": "https://img.fantaskycdn.com/c8b12113667eaeb5ee84dea3a625e2a9_360x.jpeg",
+        "title": "MICHIGAN ",
+        "price": 230
+    },
+    {
+        "id":4,
+        "image": "https://img.fantaskycdn.com/fb2aa3ae55ab34df07acb30aeb7f3d6c_360x.jpeg",
+        "title": "HEAVEN",
+        "price": 210
+    },
+    {
+        "id":5,
+        "image": "https://img.fantaskycdn.com/dab7288be3fabe6901cf0dbbca0bb4f1_360x.jpeg",
+        "title": "HEAVEN",
+        "price": 250
+    }
+]
