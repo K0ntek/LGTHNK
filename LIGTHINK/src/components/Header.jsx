@@ -12,6 +12,10 @@ import { Link } from "react-router-dom";
 
 const Header =()=>{
 
+    useEffect(() => {
+		window.scrollTo(0, 0)
+	  }, [])
+
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
         gsap.fromTo('.headerImage', {y:'300', opacity:0}, {y:0, opacity:1, duration:.5, delay:.5})
@@ -125,7 +129,7 @@ const Header =()=>{
                         ' ',
                         100,
                 ]}
-                speed={60}
+                speed={70}
                 repeat={Infinity}
                 className="markPasswordContent w-[95%] absolute top-0 mx-auto text-center text-[#74523f] text-2xl lg:text-5xl font-megrim font-extrabold tracking-[6px] lg:tracking-[10px] leading-9 lg:leading-[60px]"
             />
@@ -133,10 +137,10 @@ const Header =()=>{
         </div>
 
         <div className="desc w-full bg-white  space-y-[-40px]">
-            <div className=" overflow-hidden lg:border-b-2 border-black"><h1 className=" descTitle text-[70px] md:text-[100px] lg:text-[150px] font-megrim font-extrabold relative left-[15%]">WYGODA</h1></div>
+            <div className=" overflow-hidden"><h1 className=" descTitle text-[70px] md:text-[100px] lg:text-[150px] font-megrim font-extrabold relative left-[15%]">WYGODA</h1></div>
             {/* <div className="bg-[#49332b]"><h1 className="borderedText text-[150px] font-megrim relative left-[35%] text-transparent">JAKOSC</h1></div> */}
-            <div className=" overflow-hidden lg:border-b-2 border-black"><h1 className=" descTitle borderedText text-[70px] md:text-[100px] lg:text-[150px] font-megrim relative left-[30%] sm:left-[45%] text-transparent">JAKOSC</h1></div>
-            <div className=" overflow-hidden lg:border-b-2 border-black"><h1 className=" descTitle text-[70px] md:text-[100px] lg:text-[150px] font-megrim font-extrabold relative left-[20%] sm:left-[35%]">WYGLAD</h1></div>
+            <div className=" overflow-hidden"><h1 className=" descTitle borderedText text-[70px] md:text-[100px] lg:text-[150px] font-megrim relative left-[30%] sm:left-[45%] text-transparent">JAKOSC</h1></div>
+            <div className=" overflow-hidden"><h1 className=" descTitle text-[70px] md:text-[100px] lg:text-[150px] font-megrim font-extrabold relative left-[20%] sm:left-[35%]">WYGLAD</h1></div>
         </div>
         <div className="min-h-screen bg-black py-8 products">
                 <h1 className="font-megrim text-[#502f1b] text-5xl lg:text-7xl xl:text-8xl  ml-[10%] productsTitle">NAJNOWSZE</h1>

@@ -86,7 +86,7 @@ const Navbar =()=>{
                 {/*fixed top-[-100%] lg:relative lg:top-0 */}
                             <div className={`navbar bg-black h-screen lg:bg-transparent lg:h-[60px] mt-3 fixed top-[-100%] w-full lg:top-0 hidden lg:block`}>
                                 <AiOutlineClose className="text-[30px] text-white absolute top-0 right-3 lg:hidden hover:text-gray-600" onClick={hideNavbar}/>
-                            <ul className="lg:flex space-x-4 w-fit mx-auto relative top-[30%] lg:top-0">
+                            <ul className="lg:flex space-x-4 w-fit mx-auto relative top-[20%] lg:top-0">
                                                 {navElements.map((element, i)=>{
                                                     return(
                                                         <Link to={element.link} key={i}>
@@ -98,7 +98,7 @@ const Navbar =()=>{
                                                     )
                                                 })}
                                             </ul>
-                                            <div className="absolute bottom-[20%] right-[50%] translate-x-[50%] lg:absolute lg:top-[0px] lg:right-[3%] lg:translate-x-0 lg:flex space-x-2">
+                                            <div className="absolute bottom-[30%] right-[50%] translate-x-[50%] lg:absolute lg:top-[0px] lg:right-[3%] lg:translate-x-0 lg:flex space-x-2">
                                                 <div className="flex">
                                                 <Link to={'/register'}><BsFillPersonFill className="text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200"/></Link>
                                                 <PiBagBold  className="text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200" onClick={toggleBag}/>
@@ -109,7 +109,7 @@ const Navbar =()=>{
                                                 </div>
                                             </div>
 
-                                                <div className=" absolute bottom-[5%] left-[50%] translate-x-[-50%] lg:hidden">
+                                                <div className=" absolute bottom-[15%] left-[50%] translate-x-[-50%] lg:hidden">
                                                 <div className="socials z-[99] space-x-4 flex">
                                                 <FiInstagram className="text-3xl text-white hover:text-[silver] transition-all duration-200"/>
                                                     <FaFacebook className="text-3xl text-white hover:text-[silver] transition-all duration-200"/>
