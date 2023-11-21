@@ -169,7 +169,7 @@ const Product = () => {
 		<div className="w-full min-h-fit bg-black mt-[10%] relative">
 			<div className="md:w-[70%] bg-gradient-to-b from-[#010101] to-black rounded-3xl h-fit relative md:left-[15%] md:top-[-80px] sm:top-[-50px] top-[-30px] shadow-2xl shadow-black">
 
-				 <div className='bg-[#0c0704] w-3/4 mx-auto rounded-full relative top-[20px] shadow-[0_0_30px_0] shadow-[#0c0704] z-[90]'>
+				 <div className=' w-3/4 mx-auto rounded-full relative top-[20px] shadow-[0_0_30px_0] z-[90]'>
 					<h1 className=' text-5xl font-megrim text-white text-center py-3'>OPIS</h1>
 				</div>
 
@@ -177,17 +177,20 @@ const Product = () => {
 					<h1 className=' font-megrim text-white text-3xl my-5 ml-[10%]'>TABELA ROZMIAROW</h1>
 					{/* {sizeTable.map((element, i)=>{ */}
 						{/* return( */}
-							<div className='grid grid-cols-4 text-white text-center mx-auto '>
+							<div className='grid grid-cols-4 text-white text-center mx-auto w-[95%]'>
 								
-								<div className='bg-[#020202]'>
+								<div className='bg-[#030303]'>
 								{sizeTable.map((element, i)=>{
 									return(
 									<>
 										{i==0&&(
 												<p className=' font-megrim text-lg md:text-2xl bg-[#030201]'>{element.size}</p>
 										)}
-										{i!=0&&(
-												<p className='md:text-xl'>{element.size}</p>
+										{(i!=0 &&i%2==0)&&(
+												<p className='md:text-xl bg-black'>{element.size}</p>
+										)}
+										{(i!=0 &&i%2!=0)&&(
+												<p className='md:text-xl bg-[#030303]'>{element.size}</p>
 										)}
 									</>
 									)
@@ -201,23 +204,29 @@ const Product = () => {
 										{i==0&&(
 												<p className=' font-megrim text-lg md:text-2xl bg-[#030201]'>{element.width}</p>
 										)}
-										{i!=0&&(
-												<p className='md:text-xl'>{element.width}</p>
+										{(i!=0 &&i%2==0)&&(
+												<p className='md:text-xl bg-black'>{element.width}</p>
+										)}
+										{(i!=0 &&i%2!=0)&&(
+												<p className='md:text-xl bg-[#030303]'>{element.width}</p>
 										)}
 									</>
 									)
 								})}
 								</div>
 
-								<div className='bg-[#020202]'>
+								<div className='bg-[#030303]'>
 								{sizeTable.map((element, i)=>{
 									return(
 									<>
 										{i==0&&(
 												<p className=' font-megrim text-lg md:text-2xl bg-[#030201]'>{element.length}</p>
 										)}
-										{i!=0&&(
-												<p className=' md:text-xl'>{element.length}</p>
+										{(i!=0 &&i%2==0)&&(
+												<p className='md:text-xl bg-black'>{element.length}</p>
+										)}
+										{(i!=0 &&i%2!=0)&&(
+												<p className='md:text-xl bg-[#030303]'>{element.length}</p>
 										)}
 									</>
 									)
@@ -231,8 +240,11 @@ const Product = () => {
 										{i==0&&(
 												<p className=' font-megrim text-lg md:text-2xl bg-[#030201]'>{element.arm}</p>
 										)}
-										{i!=0&&(
-												<p className=' md:text-xl'>{element.arm}</p>
+										{(i!=0 &&i%2==0)&&(
+												<p className='md:text-xl bg-black'>{element.arm}</p>
+										)}
+										{(i!=0 &&i%2!=0)&&(
+												<p className='md:text-xl bg-[#030303]'>{element.arm}</p>
 										)}
 									</>
 									)
@@ -244,16 +256,16 @@ const Product = () => {
 				</div>
 
 				<div className="grid lg:grid-cols-2 text-white w-[100%] mx-auto gap-5 mt-8 relative lg:top-[20px] ">
-						<div className='p-6 bg-[#030201] rounded-3xl z-[5]'>
+						<div className='p-6 bg-[#080402] rounded-3xl z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%]'>SKLAD</h1>
 							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quasi velit ipsum aliquid dolorum dolorem, non modi doloribus accusamus aspernatur necessitatibus saepe, natus explicabo eius quia beatae amet consectetur sit a illo fuga nulla provident neque. Aperiam blanditiis, quam ab vitae ea asperiores magni ipsam vel! Qui dolores id ex.</p>
 						</div>
-						<div className='p-6 bg-[#030201] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[50%] z-[5]'>
+						<div className='p-6 bg-[#030505] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[50%] z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%]'>O PRODUKCIE</h1>
 							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rem, mollitia voluptatum cupiditate obcaecati maxime voluptates. Quaerat reprehenderit quas alias consequatur eum libero dolores voluptatem quod aperiam? Commodi libero amet nulla tempore accusantium quidem sequi pariatur reprehenderit maiores quisquam ducimus, nostrum, harum alias ratione impedit exercitationem soluta veniam temporibus aliquam.</p>
 						</div>
 
-						<div className='p-6 bg-[#030201] rounded-3xl relative md:left-[-40px] z-[5]'>
+						<div className='p-6 bg-[#030303] rounded-3xl relative md:left-[-40px] z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%]'>DOSTAWA</h1>
 							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rem, mollitia voluptatum cupiditate obcaecati maxime voluptates. Quaerat reprehenderit quas alias consequatur eum libero dolores voluptatem quod aperiam? Commodi libero amet nulla tempore accusantium quidem sequi pariatur reprehenderit maiores quisquam ducimus, nostrum, harum alias ratione impedit exercitationem soluta veniam temporibus aliquam.</p>
 						</div>

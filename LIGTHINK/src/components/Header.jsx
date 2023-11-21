@@ -12,9 +12,9 @@ import { Link } from "react-router-dom";
 
 const Header =()=>{
 
-    useEffect(() => {
-		window.scrollTo(0, 0)
-	  }, [])
+    // useEffect(() => {
+	// 	window.scrollTo(0, 0)
+	//   }, [])
 
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
@@ -110,7 +110,7 @@ const Header =()=>{
                 <div className=" h-fit md:h-screen bg-[#e0e0e0] text-center py-10 md:py-0">
                    <div className=" relative md:top-[50%] md:translate-y-[-30%] space-y-10 md:space-y-8">
                         <h1 className=" font-megrim text-7xl lg:text-8xl text-[#74523f]">KOBIETA</h1>
-                            <Link to="/women"><button className=" font-sen bg-gray-800 text-white px-8 py-4 text-2xl hover:rounded-2xl transition-all duration-200 hover:bg-gray-900">PRZEGLĄDAJ</button></Link>
+                            <Link to="/women"><button className=" font-sen border-[2px] border-gray-950 text-gray-950 px-8 py-4 text-2xl hover:rounded-2xl transition-all duration-200">PRZEGLĄDAJ</button></Link>
                             <p className="w-[70%] mx-auto text-justify font-gruppo text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, consectetur! Neque temporibus, laudantium voluptatum illo, eligendi libero possimus facere repellendus recusandae officiis exercitationem voluptatibus perferendis rem error voluptates magnam aut.</p>
                 </div>
                 </div>
@@ -131,7 +131,7 @@ const Header =()=>{
                 ]}
                 speed={70}
                 repeat={Infinity}
-                className="markPasswordContent w-[95%] absolute top-0 mx-auto text-center text-[#74523f] text-2xl lg:text-5xl font-megrim font-extrabold tracking-[6px] lg:tracking-[10px] leading-9 lg:leading-[60px]"
+                className=" mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto text-center text-[#864f30] text-2xl lg:text-5xl font-sen tracking-[6px] leading-9 lg:leading-[50px]"
             />
             </div>
         </div>
@@ -143,8 +143,8 @@ const Header =()=>{
             <div className=" overflow-hidden"><h1 className=" descTitle text-[70px] md:text-[100px] lg:text-[150px] font-megrim font-extrabold relative left-[20%] sm:left-[35%]">WYGLAD</h1></div>
         </div>
         <div className="min-h-screen bg-black py-8 products">
-                <h1 className="font-megrim text-[#502f1b] text-5xl lg:text-7xl xl:text-8xl  ml-[10%] productsTitle">NAJNOWSZE</h1>
-                <h1 className="font-megrim text-gray-900 text-5xl lg:text-7xl xl:text-8xl  ml-[30%] productsTitle"> PRODUKTY</h1>
+                <h1 className="font-megrim text-[#acacac] text-5xl lg:text-7xl xl:text-8xl  ml-[10%] productsTitle">NAJNOWSZE</h1>
+                <h1 className="font-megrim text-white text-5xl lg:text-7xl xl:text-8xl  ml-[30%] productsTitle"> PRODUKTY</h1>
                 {/* <h1 className="font-megrim text-[#555555] text-3xl sm:text-5xl lg:text-7xl xl:text-8xl  ml-[5%] productsTitle">NAJNOWSZE PRODUKTY</h1> */}
                <NewProducts/>
         </div>

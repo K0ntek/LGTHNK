@@ -16,7 +16,7 @@ const NewProducts =()=>{
                                 <p className=" ml-4 font-gruppo text-3xl">{element.price} zł</p>
                                 <div className=" flex space-x-8 justify-center">
                                     <button className=" border-2 border-[#25160d] px-4 py-2 hover:rounded-2xl transition-all duration-100">DO KOSZYKA</button>
-                                    <button className=" border-2 border-[#25160d] bg-[#25160d] px-4 py-2 hover:rounded-2xl transition-all duration-100">KUP TERAZ</button>
+                                    <button className=" border-2 border-[#492914] bg-[#492914] px-4 py-2 hover:rounded-2xl transition-all duration-100">KUP TERAZ</button>
                                 </div>
                             </div>
                         </div>
