@@ -12,9 +12,9 @@ import { Link } from "react-router-dom";
 
 const Header =()=>{
 
-    // useEffect(() => {
-	// 	window.scrollTo(0, 0)
-	//   }, [])
+     useEffect(() => {
+	 	window.scrollTo(0, 0)
+	   }, [])
 
     useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
