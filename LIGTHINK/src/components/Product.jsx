@@ -260,12 +260,12 @@ const Product = () => {
 							<h1 className=' text-3xl font-megrim ml-[10%]'>SKLAD</h1>
 							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quasi velit ipsum aliquid dolorum dolorem, non modi doloribus accusamus aspernatur necessitatibus saepe, natus explicabo eius quia beatae amet consectetur sit a illo fuga nulla provident neque. Aperiam blanditiis, quam ab vitae ea asperiores magni ipsam vel! Qui dolores id ex.</p>
 						</div>
-						<div className=w-[95%] mx-auto 'p-6 bg-[#07180c] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[50%] z-[5]'>
+						<div className='w-[95%] mx-auto p-6 bg-[#07180c] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[50%] z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%]'>O PRODUKCIE</h1>
 							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rem, mollitia voluptatum cupiditate obcaecati maxime voluptates. Quaerat reprehenderit quas alias consequatur eum libero dolores voluptatem quod aperiam? Commodi libero amet nulla tempore accusantium quidem sequi pariatur reprehenderit maiores quisquam ducimus, nostrum, harum alias ratione impedit exercitationem soluta veniam temporibus aliquam.</p>
 						</div>
 
-						<div className=w-[95%] mx-auto 'p-6 bg-[#030303] shadow-[-20px_20px_37px_-26px] shadow-white rounded-3xl relative md:left-[-40px] z-[5]'>
+						<div className='w-[95%] mx-auto p-6 bg-[#030303] shadow-[-20px_20px_37px_-26px] shadow-white rounded-3xl relative md:left-[-40px] z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%]'>DOSTAWA</h1>
 							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rem, mollitia voluptatum cupiditate obcaecati maxime voluptates. Quaerat reprehenderit quas alias consequatur eum libero dolores voluptatem quod aperiam? Commodi libero amet nulla tempore accusantium quidem sequi pariatur reprehenderit maiores quisquam ducimus, nostrum, harum alias ratione impedit exercitationem soluta veniam temporibus aliquam.</p>
 						</div>
