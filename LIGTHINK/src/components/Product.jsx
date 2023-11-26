@@ -76,6 +76,24 @@ const Product = () => {
         },
     ]
 
+	const delivery=[
+		{
+			deliveryElement : 'Szybka Wysyłka'
+		},
+
+		{
+			deliveryElement : 'Bezpieczne Opakowanie'
+		},
+
+		{
+			deliveryElement : 'Opcje Dostawy'
+		},
+
+		{
+			deliveryElement : 'Gwarancja Zadowolenia'
+		},
+	]
+
 
 	const [counter, setCounter] = useState(1);
 	const [activeSize, setActiveSize] = useState(-1);
@@ -154,10 +172,10 @@ const Product = () => {
 					</div>
 
 					<div className=" flex space-x-8 mb-12">
-						<button className=" border-2 border-[#25160d] px-4 py-2 hover:rounded-2xl transition-all duration-100">
+						<button className=" border-2 border-[#58321b] px-4 py-2 hover:rounded-2xl transition-all duration-100">
 							DO KOSZYKA
 						</button>
-						<button className=" border-2 border-[#25160d] bg-[#25160d] text-white px-4 py-2 hover:rounded-2xl transition-all duration-100">
+						<button className=" border-2 border-[#58321b] bg-[#58321b] text-white px-4 py-2 hover:rounded-2xl transition-all duration-100">
 							KUP TERAZ
 						</button>
 					</div>
@@ -166,11 +184,13 @@ const Product = () => {
 		</div>
 
 
-		<div className="w-full min-h-fit bg-black mt-[10%] relative">
-			<div className="md:w-[70%] bg-gradient-to-b from-[#010101] shadow-[0px_0px_20px_0px] shadow-white to-black rounded-3xl h-fit relative md:left-[15%] md:top-[-80px] sm:top-[-50px] top-[-30px] shadow-2xl shadow-black">
+		<div className="w-full min-h-fit bg-[#000000] mt-[10%] relative">
+			<div className="md:w-[70%] bg-gradient-to-b from-[#010101] to-black shadow-[0px_0px_20px_0px] shadow-white rounded-3xl h-fit relative md:left-[15%] md:top-[-80px] sm:top-[-50px] top-[-30px]">
 
-				 <div className=' w-3/4 mx-auto rounded-full relative top-[20px] shadow-[0_0_30px_0] z-[90]'>
-					<h1 className=' text-5xl font-megrim text-white text-center py-3'>OPIS</h1>
+				<div className="relative w-full">
+				<div className=' w-fit mx-auto rounded-full'>
+					<h1 className=' text-5xl font-megrim text-white text-center py-3'>O PRODUKCIE</h1>
+				</div>
 				</div>
 
 				<div className='mt-8'>
@@ -256,18 +276,37 @@ const Product = () => {
 				</div>
 
 				<div className="grid lg:grid-cols-2 text-white w-[100%] mx-auto gap-5 mt-8 relative lg:top-[20px] ">
-						<div className='w-[95%] mx-auto p-6 bg-[#0e0e0e] rounded-3xl z-[5]'>
-							<h1 className=' text-3xl font-megrim ml-[10%]'>SKLAD</h1>
-							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quasi velit ipsum aliquid dolorum dolorem, non modi doloribus accusamus aspernatur necessitatibus saepe, natus explicabo eius quia beatae amet consectetur sit a illo fuga nulla provident neque. Aperiam blanditiis, quam ab vitae ea asperiores magni ipsam vel! Qui dolores id ex.</p>
+						<div className='w-[95%] mx-auto p-6 bg-white text-black rounded-3xl z-[5]'>
+							<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>SKLAD</h1>
+							<div className="font-questrial grid grid-cols-2">
+									<div>
+									<p className=' mt-4 text-2xl'>MATERIAŁ:</p>
+										{product["composition "].map((element, i)=>{
+											return(
+												<li className='ml-5 text-xl'>{element.compositionElement}</li>
+											)
+										})}
+									</div>
+
+									<div>
+									</div>
+							</div>
 						</div>
-						<div className='w-[95%] mx-auto p-6 bg-[#07180c] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[50%] z-[5]'>
+						<div className='w-[95%] mx-auto p-6 bg-[#051109] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[50%] z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%]'>O PRODUKCIE</h1>
-							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rem, mollitia voluptatum cupiditate obcaecati maxime voluptates. Quaerat reprehenderit quas alias consequatur eum libero dolores voluptatem quod aperiam? Commodi libero amet nulla tempore accusantium quidem sequi pariatur reprehenderit maiores quisquam ducimus, nostrum, harum alias ratione impedit exercitationem soluta veniam temporibus aliquam.</p>
+							<p className='text-justify mt-4 font-questrial text-xl' >{product.description}</p>
 						</div>
 
-						<div className='w-[95%] mx-auto p-6 bg-[#030303] shadow-[-20px_20px_37px_-26px] shadow-white rounded-3xl relative md:left-[-40px] z-[5]'>
+						<div className='w-[95%] mx-auto p-6 bg-[#030303] md:shadow-[-20px_20px_37px_-26px] md:shadow-white rounded-3xl relative md:left-[-40px] z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%]'>DOSTAWA</h1>
-							<p className='text-justify mt-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rem, mollitia voluptatum cupiditate obcaecati maxime voluptates. Quaerat reprehenderit quas alias consequatur eum libero dolores voluptatem quod aperiam? Commodi libero amet nulla tempore accusantium quidem sequi pariatur reprehenderit maiores quisquam ducimus, nostrum, harum alias ratione impedit exercitationem soluta veniam temporibus aliquam.</p>
+								<div className=" font-questrial text-xl">
+									<p className='text-justify mt-4'>Dbamy o to, aby Twoja bluza dotarła do Ciebie szybko, bezpiecznie i z pełnym zadowoleniem. Oto szczegóły dotyczące dostawy:</p>
+										{delivery.map((element)=>{
+											return(
+												<li className='ml-6'>{element.deliveryElement}</li>
+											)
+										})}
+								</div>
 						</div>
 					</div>
 

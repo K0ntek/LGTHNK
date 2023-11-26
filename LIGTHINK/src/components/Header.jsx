@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const Header =()=>{
 
      useEffect(() => {
-	 	window.scrollTo(0, 0)
+	 	// window.scrollTo(0, 0)
 	   }, [])
 
     useEffect(()=>{
@@ -32,6 +32,22 @@ const Header =()=>{
         tl.fromTo('.logoBorder', { width: 0 }, { duration: 0.5, width: "100%", delay: .7 })
             .to(".logoBorder", { width: "40%", marginLeft: "30%", ease: "easeInOut" });
     },[])
+
+    useEffect(()=>{
+        let womenButton = document.querySelector(".womenButton")
+        let womenButtonHover = gsap.to(".womenButtonBorder", {width:"80%", paused:true, duration:.2})
+
+        womenButton.addEventListener("mouseenter", () => womenButtonHover.play());
+        womenButton.addEventListener("mouseleave", () => womenButtonHover.reverse());
+
+        let menButton = document.querySelector(".menButton")
+        let menButtonHover = gsap.to(".menButtonBorder", {width:"80%", paused:true, duration:.2})
+
+        menButton.addEventListener("mouseenter", () => menButtonHover.play());
+        menButton.addEventListener("mouseleave", () => menButtonHover.reverse());
+
+    },[])
+
     return(
        <div className="bg-[#020202]">
         <div className=" header w-full min-h-screen relative mb-[10%]">
@@ -59,11 +75,11 @@ const Header =()=>{
                         ]}
                         speed={80}
                         repeat={Infinity}
-                        className=" absolute top-0 font-gruppo text-white md:text-2xl"
+                        className=" absolute top-0 font-megrim text-white md:text-2xl"
                     />
                     </div>
                 </div>
-            <div className="relative mt-[200px]">
+            <div className="relative mt-[300px]">
             <div className="mx-auto absolute top-[-15%] left-[50%] translate-x-[-50%] z-[98]">
                <div className=" w-fit">
                <img src ={Logo}  alt="logo" className="logo mx-auto w-[700px]"/>
@@ -76,7 +92,7 @@ const Header =()=>{
             </div>
         </div>
         <div className=" w-full bg-white relative hidden md:block overflow-x-hidden">
-            <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(17,24,39,.8)] z-[92]"></div>
+            <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(0,0,0,0.8)] z-[92]"></div>
                         <div className="w-full h-[20px] bg-black absolute top-0">
                             <div className="relative top-[50px] lg:top-[100px] right-10 z-[92]">
                                     {/* <h1 className="z-[91] font-questrial text-8xl text-[rgb(116,200,212)]">NOWA KOLEKCJA</h1> */}
@@ -103,14 +119,23 @@ const Header =()=>{
                    <div className=" relative md:top-[50%] md:translate-y-[-70%] space-y-10 md:space-y-8">
                    {/* <p className="w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur, enim eaque labore sed doloremque architecto eius debitis consequuntur sapiente quisquam ut reprehenderit, quo consequatur ipsa iusto. Ducimus, sit labore.</p> */}
                         <h1 className=" font-megrim text-7xl lg:text-8xl text-gray-800">MEZCZYZNA</h1>
-                            <Link to="/men"><button className=" font-sen border-[2px] border-[#74523f] text-[#74523f] px-8 py-4 text-2xl hover:rounded-2xl transition-all duration-200">PRZEGLĄDAJ</button></Link>
+                        <div className="w-fit mx-auto">
+                                <div className="menButtonBorder w-[40%] h-[2px] bg-[#74523f] mx-auto"></div>
+                                <Link to="/men"><button className="menButton bg-[#020202] font-sen text-[#74523f] px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200">PRZEGLĄDAJ</button></Link>
+                                <div className="menButtonBorder w-[40%] h-[2px] bg-[#74523f] mx-auto"></div>
+                            </div>
+                            {/* <Link to="/men"><button className=" font-sen border-[2px] border-[#74523f] text-[#74523f] px-8 py-4 text-2xl hover:rounded-2xl transition-all duration-200">PRZEGLĄDAJ</button></Link> */}
                             <p className="w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur, enim eaque labore sed doloremque architecto eius debitis consequuntur sapiente quisquam ut reprehenderit, quo consequatur ipsa iusto. Ducimus, sit labore.</p>
                    </div>
                 </div>
                 <div className=" h-fit md:h-screen bg-[#e0e0e0] text-center py-10 md:py-0">
                    <div className=" relative md:top-[50%] md:translate-y-[-30%] space-y-10 md:space-y-8">
                         <h1 className=" font-megrim text-7xl lg:text-8xl text-[#74523f]">KOBIETA</h1>
-                            <Link to="/women"><button className=" font-sen border-[2px] border-gray-950 text-gray-950 px-8 py-4 text-2xl hover:rounded-2xl transition-all duration-200">PRZEGLĄDAJ</button></Link>
+                            <div className="w-fit mx-auto">
+                                <div className="womenButtonBorder w-[40%] h-[2px] bg-gray-950 mx-auto"></div>
+                                <Link to="/women"><button className="womenButton bg-[#dfdfdf] font-sen text-gray-950 px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200">PRZEGLĄDAJ</button></Link>
+                                <div className="womenButtonBorder w-[40%] h-[2px] bg-gray-950 mx-auto"></div>
+                            </div>
                             <p className="w-[70%] mx-auto text-justify font-gruppo text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, consectetur! Neque temporibus, laudantium voluptatum illo, eligendi libero possimus facere repellendus recusandae officiis exercitationem voluptatibus perferendis rem error voluptates magnam aut.</p>
                 </div>
                 </div>
@@ -119,12 +144,12 @@ const Header =()=>{
 
         <div className=" h-fit bg-black markPasswordWrapper">
             <div className="markPassword w-[90%] lg:w-3/4 rounded-3xl bg-gradient-to-t from-black to-gray-950 mx-auto p-4 relative top-[-30px] lg:top-[-100px]">
-                <h1 className=" mx-auto text-justify text-transparent text-2xl lg:text-5xl font-megrim font-extrabold tracking-[6px] lg:tracking-[10px] leading-9 lg:leading-[60px]">"Odkryj magiczna sile stylu z LGTHNK - ubrania inspirowane mitologia, ktore wzbogaca Twoja garderobe o niezwykla opowiesc. Kazdy kawalek naszej kolekcji to mistyczna podroz przez legendy i mitologie, przeksztalcajaca mode w epicka przygode. Ubrania LGTHNK - laczace nowoczesny design z odwiecznymi historiami, abys mogl nosic nie tylko ubranie, ale rowniez opowiesc. Wejdz do swiata LGTHNK i stworz swoja legende modowej ekspresji!"</h1>
+                <h1 className=" mx-auto text-justify text-transparent text-2xl lg:text-5xl font-megrim font-extrabold tracking-[6px] lg:tracking-[10px] leading-9 lg:leading-[60px] opacity-0">"Odkryj magiczną siłę stylu z LGTHNK - ubrania inspirowane mitologią, które wzbogacą Twoją garderobę o niezwykłą opowieść. Każdy kawałek naszej kolekcji to mistyczna podróż przez legendy i mitologie, przekształcająca modę w epicką przygodę. Ubrania LGTHNK - łącące nowoczesny design z odwiecznymi historiami, abyś mógł nosić nie tylko ubranie, ale również opowieść. Wejdź do świata LGTHNK i stwórz swoją legendę modowej ekspresji!"</h1>
                 <TypeAnimation
                 sequence={[
                         " ",
                         500,
-                        '"Odkryj magiczna sile stylu z LGTHNK - ubrania inspirowane mitologia, ktore wzbogaca Twoja garderobe o niezwykla opowiesc. Kazdy kawalek naszej kolekcji to mistyczna podroz przez legendy i mitologie, przeksztalcajaca mode w epicka przygode. Ubrania LGTHNK - laczace nowoczesny design z odwiecznymi historiami, abys mogl nosic nie tylko ubranie, ale rowniez opowiesc. Wejdz do swiata LGTHNK i stworz swoja legende modowej ekspresji!"',
+                        '"Odkryj magiczną siłę stylu z LGTHNK - ubrania inspirowane mitologią, które wzbogacą Twoją garderobę o niezwykłą opowieść. Każdy kawałek naszej kolekcji to mistyczna podróż przez legendy i mitologie, przekształcająca modę w epicką przygodę. Ubrania LGTHNK - łącące nowoczesny design z odwiecznymi historiami, abyś mógł nosić nie tylko ubranie, ale również opowieść. Wejdź do świata LGTHNK i stwórz swoją legendę modowej ekspresji!"',
                         10000,
                         ' ',
                         100,

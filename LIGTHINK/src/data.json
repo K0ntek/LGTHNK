@@ -3,30 +3,53 @@
         "id":1,
         "image": "https://img.fantaskycdn.com/4860b0a3e5be18ea3f354e9f4be82072_1080x.png",
         "title": "Grand Lake COLORADO",
-        "price": 240
+        "price": 240,
+        "description": "Wprowadź swoją garderobę na nowy poziom komfortu z naszą miękką i wygodną bluzą, stworzoną z doskonałego połączenia 90% bawełny i 10% elastanu. Ta bluza to prawdziwy raj dla Twojego ciała, łącząc w sobie najlepsze cechy obu materiałów, aby zapewnić niepowtarzalne doznania noszenia.",
+        "composition ": [
+            {"compositionElement": "bawełna - 90%"},
+            {"compositionElement": "elastan - 10%"}
+        ]
     },
     {
         "id":2,
         "image": "https://img.fantaskycdn.com/c99b6811340f15f521fc433309feea56_1080x.jpeg",
         "title": "Grand Lake COLORADO",
-        "price": 220
+        "price": 220,
+        "description": "Zanurz się w doskonałym komforcie i niezapomnianej miękkości naszej najnowszej bluzy, stworzonej z myślą o Twoim doskonałym samopoczuciu. Ta wyjątkowa bluza, wykonana z najwyższej jakości 100% bawełny, oferuje nie tylko niepowtarzalny styl, ale także niezrównany komfort na każdym kroku.",
+        "composition ": [
+            {"compositionElement": "bawełna - 100%"}
+        ]
     },
     {
         "id":3,
         "image": "https://img.fantaskycdn.com/c8b12113667eaeb5ee84dea3a625e2a9_360x.jpeg",
         "title": "MICHIGAN ",
-        "price": 230
+        "price": 230,
+        "description": "Odkryj nowy wymiar komfortu w naszej wyjątkowej bluzie, stworzonej z perfekcyjnie skomponowanych materiałów. Z 85% bawełny, 10% elastanu i 5% poliestru, ta bluza łączy w sobie najlepsze cechy trzech różnych materiałów, oferując niezapomniane doznania z każdym noszeniem.",
+        "composition ": [
+            {"compositionElement": "bawełna - 85%"},
+            {"compositionElement": "elastan - 10%"},
+            {"compositionElement": "poliester - 5%"}
+        ]
     },
     {
         "id":4,
         "image": "https://img.fantaskycdn.com/fb2aa3ae55ab34df07acb30aeb7f3d6c_360x.jpeg",
         "title": "HEAVEN",
-        "price": 210
+        "price": 210,
+        "description": "Zanurz się w doskonałym komforcie i niezapomnianej miękkości naszej najnowszej bluzy, stworzonej z myślą o Twoim doskonałym samopoczuciu. Ta wyjątkowa bluza, wykonana z najwyższej jakości 100% bawełny, oferuje nie tylko niepowtarzalny styl, ale także niezrównany komfort na każdym kroku.",
+        "composition ": [
+            {"compositionElement": "bawełna - 100%"}
+        ]
     },
     {
         "id":5,
         "image": "https://img.fantaskycdn.com/dab7288be3fabe6901cf0dbbca0bb4f1_360x.jpeg",
         "title": "HEAVEN",
-        "price": 250
+        "price": 250,
+        "description": "Zanurz się w doskonałym komforcie i niezapomnianej miękkości naszej najnowszej bluzy, stworzonej z myślą o Twoim doskonałym samopoczuciu. Ta wyjątkowa bluza, wykonana z najwyższej jakości 100% bawełny, oferuje nie tylko niepowtarzalny styl, ale także niezrównany komfort na każdym kroku.",
+        "composition ": [
+            {"compositionElement": "bawełna - 100%"}
+        ]
     }
 ]

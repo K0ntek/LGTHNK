@@ -49,7 +49,7 @@ const Collections =()=>{
                     ssr={true}>
                         {data.map((element, i)=>{
                             return(
-                                <Link to={"/product"} draggable="false">
+                                <Link to={`/product/${element.id}`} draggable="false">
                                 <div className="my-[10%] bg-[#070707] pb-8 hover:bg-[#0a0a0a] hover:rounded-3xl transition-all duration-100 overflow-hidden mx-3">
                                 <img draggable="false" src={element.image} alt="product" className="w-full"/>
                                 <div className=" text-white w-[90%] mx-auto mt-4">
@@ -80,7 +80,7 @@ const Collections =()=>{
                     autoPlaySpeed={4000}>
                         {data.map((element, i)=>{
                             return(
-                                <Link to={"/product"} draggable="false">
+                                <Link to={`/product/${element.id}`} draggable="false">
                                 <div className="my-[10%] bg-[#070707] pb-8 hover:bg-[#0a0a0a] hover:rounded-3xl transition-all duration-100 overflow-hidden mx-3">
                                 <img draggable="false" src={element.image} alt="product" className="w-full"/>
                                 <div className=" text-white w-[90%] mx-auto mt-4">
@@ -111,7 +111,7 @@ const Collections =()=>{
                     autoPlaySpeed={4000}>
                         {data.map((element, i)=>{
                             return(
-                                <Link to={"/product"} draggable="false">
+                                <Link to={`/product/${element.id}`} draggable="false">
                                 <div className="my-[10%] bg-[#070707] pb-8 hover:bg-[#0a0a0a] hover:rounded-3xl transition-all duration-100 overflow-hidden mx-3">
                                 <img draggable="false" src={element.image} alt="product" className="w-full"/>
                                 <div className=" text-white w-[90%] mx-auto mt-4">
