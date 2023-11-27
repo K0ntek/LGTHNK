@@ -278,7 +278,7 @@ const Product = () => {
 				<div className="grid lg:grid-cols-2 text-white w-[100%] mx-auto gap-5 mt-8 relative lg:top-[20px] ">
 						<div className='w-[95%] mx-auto p-6 bg-white text-black rounded-3xl z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>SKLAD</h1>
-							<div className="font-questrial grid grid-cols-2">
+							<div className="font-questrial">
 									<div>
 									<p className=' mt-4 text-2xl'>MATERIAŁ:</p>
 										{product["composition "].map((element, i)=>{
