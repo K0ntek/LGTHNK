@@ -30,6 +30,10 @@ const Navbar =()=>{
             link: '/about',
             title: 'O nas'
         },
+	{
+            link: '/custom',
+            title: 'Custom'
+        },
     ]
 
     const toggleBag =()=>{
