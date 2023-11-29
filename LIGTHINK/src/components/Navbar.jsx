@@ -81,7 +81,7 @@ const Navbar =()=>{
         <div>
             <div className=" fixed top-0 left-0 w-full h-[60px] z-[99] bg-[#020202]">
                 <FiMenu className=" lg:hidden text-[30px] text-white absolute top-3 right-3" onClick={toggleNavbar}/>
-                    <div className="relative w-fit">
+                    <div className="relative">
                         <Link to={"/"}><img src ={Logo}  className=" mx-auto w-[120px] absolute top-2 left-[50%] translate-x-[-50%] lg:left-[5%] h-auto z-[99]"/></Link>
 {/* 			    <div className="w-0 h-[2px] bg-white mx-auto rounded-full hover:w-1/2 transition-all duration-200"></div> */}
                     </div>
