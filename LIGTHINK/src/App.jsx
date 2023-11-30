@@ -15,6 +15,7 @@ import CategoryProducts from './components/categoryProducts'
 import Collections from './components/Collections'
 import Men from './components/Men'
 import Women from './components/Women'
+import Custom from './components/Custom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,6 +33,7 @@ function App() {
       <Route path="/women" element={<Women/>} />
       <Route path="/women" element={<CategoryProducts/>} />
       <Route path="/collections" element={<Collections/>} />
+      <Route path="/custom" element={<Custom/>} />
     </Routes>
       {/* <ShoppingBag/> */}
       <Footer/>

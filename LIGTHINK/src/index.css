@@ -110,6 +110,14 @@ body{
   background: #000;
   z-index: 90;
 }
+
+.newCollection{
+  background: url("https://www.wavyboyclothing.com/cdn/shop/products/DSC08024.jpg?v=1666774893");
+  background-attachment: fixed ;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* 
 button{
   position: relative;

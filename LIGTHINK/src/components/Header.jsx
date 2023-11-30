@@ -91,20 +91,14 @@ const Header =()=>{
             </div>
             </div>
         </div>
-        <div className=" w-full bg-white relative hidden md:block overflow-x-hidden">
+        <div className="newCollection w-full bg-white relative hidden md:block overflow-x-hidden">
             <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(0,0,0,0.8)] z-[92]"></div>
-                        <div className="w-full h-[20px] bg-black absolute top-0">
-                            <div className="relative top-[50px] lg:top-[100px] right-10 z-[92]">
-                                    {/* <h1 className="z-[91] font-questrial text-8xl text-[rgb(116,200,212)]">NOWA KOLEKCJA</h1> */}
+                            <div className="newCollectionContent relative top-[50px] lg:top-[100px] right-10 z-[92]">
                                     <h1 className=" font-questrial text-3xl md:text-6xl xl:text-8xl text-gray-900 text-right">NOWA KOLEKCJA</h1>
                                         <div className="relative ">
                                             <a href="/collections" className=""><button className="absolute right-0 md:right-10 bg-black text-white md:px-8 py-2 md:py-4 md:text-xl lg:text-3xl font-gruppo hover:rounded-2xl hover:bg-slate-800 transition-all duration-200"> KUP TERAZ</button></a>
                                         </div>
                             </div>
-                                    </div>
-                <div className=" relative z-[90]">
-                    <img src="https://www.wavyboyclothing.com/cdn/shop/products/DSC08024.jpg?v=1666774893" className="w-full aspect-video z-[90] rounded-[20px_20px_0px_0px]"/>
-                </div>
         </div>
         {/* <div className="h-[20px] grid grid-cols-2 relative top-[-30px]">
                 <div className=" h-screen bg-black"></div>
@@ -172,6 +166,30 @@ const Header =()=>{
                 <h1 className="font-megrim text-white text-5xl lg:text-7xl xl:text-8xl  ml-[30%] productsTitle"> PRODUKTY</h1>
                 {/* <h1 className="font-megrim text-[#555555] text-3xl sm:text-5xl lg:text-7xl xl:text-8xl  ml-[5%] productsTitle">NAJNOWSZE PRODUKTY</h1> */}
                <NewProducts/>
+        </div>
+
+        <div className="bg-black">
+            {/* <div className="w-1/2 mx-auto h-1 rounded-full bg-[#492914]"></div> */}
+        </div>
+
+        <div className="min-h-screen bg-white grid md:grid-cols-2 text-black ">
+                        <div className=" mx-auto w-full py-7">
+                            <div className="sticky top-[50%] space-y-7">
+                            {/* <div className="absolute h-[100%] w-1 bg-[#492914] right-0"></div> */}
+                                <h1 className="text-center text-7xl lg:text-9xl font-megrim text-gray-900">CUSTOM</h1>
+                                <p className="w-1/2 text-justify mx-auto">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia perferendis eos cupiditate? Impedit, natus autem odit beatae tenetur quisquam harum!
+                                </p>
+                                <div className="w-fit mx-auto group">
+                                    <div className=" bg-[#854a23] w-1/2 h-[2px] mx-auto group-hover:w-full transition-all duration-200"></div>
+                                    <Link to="/custom"><button className=" text-3xl font-questrial px-4 py-2 group-hover:tracking-[1px] transition-all duration-200">SPRAWDŹ</button></Link>
+                                    <div className=" bg-gray-800 w-1/2 h-[2px] mx-auto group-hover:w-full transition-all duration-200"></div>
+                                </div>
+                            </div>
+                        </div>
+                <div className=" hidden md:block">
+                    <img src="https://images.unsplash.com/photo-1512551980832-13df02babc9e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+                </div>
         </div>
 
        </div>
