@@ -172,7 +172,7 @@ const Header =()=>{
             {/* <div className="w-1/2 mx-auto h-1 rounded-full bg-[#492914]"></div> */}
         </div>
 
-	<div className=" w-full h-[6px] bg-gradient-to-l from-black to-gray-800"></div>
+	<div className=" w-full h-[6px] bg-gradient-to-r from-black to-gray-800"></div>
         <div className="min-h-screen bg-white grid md:grid-cols-2 text-black ">
                         <div className=" mx-auto w-full py-7">
                             <div className="sticky top-[50%] space-y-7">
