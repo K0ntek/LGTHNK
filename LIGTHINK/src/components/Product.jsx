@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { Link, useParams } from "react-router-dom";
 import data from '../data.json'
+import addToBag from '../App';
 
 const Product = () => {
 	
@@ -115,8 +116,6 @@ const Product = () => {
 		}
 	};
 
-	let price = 240;
-
    	const { id } = useParams();
 	const [product, setProduct] = useState();
 	useEffect(() => {
@@ -172,7 +171,7 @@ const Product = () => {
 					</div>
 
 					<div className=" flex space-x-8 mb-12">
-						<button className=" border-2 border-[#58321b] px-4 py-2 hover:rounded-2xl transition-all duration-100">
+						<button className=" border-2 border-[#58321b] px-4 py-2 hover:rounded-2xl transition-all duration-100" onclick={addToBag}>
 							DO KOSZYKA
 						</button>
 						<button className=" border-2 border-[#58321b] bg-[#58321b] text-white px-4 py-2 hover:rounded-2xl transition-all duration-100">

@@ -16,9 +16,29 @@ import Collections from './components/Collections'
 import Men from './components/Men'
 import Women from './components/Women'
 import Custom from './components/Custom'
+import Summary from './components/Summary'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [productsInBag, setProducts] = useState([])
+  const addToBag = (product) =>{
+      const newProduct = {...product}
+      setProducts([...productsInBag, newProduct])
+  }
+
+  const productRemove = (product) => {
+		setProducts((oldState) => {
+			const productsIndex =
+				oldState.findIndex(
+					(item) =>
+						item.id === product.id
+				);
+			if (productsIndex !== -1) {
+				oldState.splice(productsIndex, 1);
+			}
+			return [...oldState];
+		});
+	};
+
 
   return (
     <>
@@ -34,6 +54,7 @@ function App() {
       <Route path="/women" element={<CategoryProducts/>} />
       <Route path="/collections" element={<Collections/>} />
       <Route path="/custom" element={<Custom/>} />
+      <Route path="/summary" element={<Summary/>} />
     </Routes>
       {/* <ShoppingBag/> */}
       <Footer/>

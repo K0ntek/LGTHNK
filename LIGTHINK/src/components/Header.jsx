@@ -9,7 +9,6 @@ import {FiInstagram} from 'react-icons/fi'
 import {FaFacebook, FaTwitter} from 'react-icons/fa'
 import NewProducts from "./NewProducts";
 import { Link } from "react-router-dom";
-
 const Header =()=>{
 
      useEffect(() => {
@@ -92,8 +91,8 @@ const Header =()=>{
             </div>
         </div>
         <div className="newCollection w-full bg-white relative hidden md:block overflow-x-hidden">
-            <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(0,0,0,0.8)] z-[92]"></div>
-                            <div className="newCollectionContent relative top-[50px] lg:top-[100px] right-10 z-[92]">
+            {/* <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(0,0,0,0.8)] z-[92]"></div> */}
+                            <div className="newCollectionContent sticky top-[50%] z-[92]">
                                     <h1 className=" font-questrial text-3xl md:text-6xl xl:text-8xl text-gray-900 text-right">NOWA KOLEKCJA</h1>
                                         <div className="relative ">
                                             <a href="/collections" className=""><button className="absolute right-0 md:right-10 bg-black text-white md:px-8 py-2 md:py-4 md:text-xl lg:text-3xl font-gruppo hover:rounded-2xl hover:bg-slate-800 transition-all duration-200"> KUP TERAZ</button></a>
@@ -150,7 +149,7 @@ const Header =()=>{
                 ]}
                 speed={70}
                 repeat={Infinity}
-                className=" mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto text-center text-[#864f30] text-2xl lg:text-5xl font-sen tracking-[6px] leading-9 lg:leading-[50px]"
+                className=" mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto text-center lg:text-justify text-clip text-[#864f30] text-2xl lg:text-5xl font-sen tracking-[6px] leading-9 lg:leading-[50px]"
             />
             </div>
         </div>
@@ -172,7 +171,6 @@ const Header =()=>{
             {/* <div className="w-1/2 mx-auto h-1 rounded-full bg-[#492914]"></div> */}
         </div>
 
-	<div className=" w-full h-[6px] bg-gradient-to-r from-black to-gray-800"></div>
         <div className="min-h-screen bg-white grid md:grid-cols-2 text-black ">
                         <div className=" mx-auto w-full py-7">
                             <div className="sticky top-[50%] space-y-7">
