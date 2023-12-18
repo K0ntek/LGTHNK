@@ -51,7 +51,7 @@ const Header =()=>{
        <div className="bg-[#020202]">
         <div className=" header w-full min-h-screen relative mb-[10%]">
 
-            <div className=" absolute right-2 top-[50%] translate-y-[-50%] h-fit hidden md:block">
+            <div className=" absolute right-2 top-[50%] translate-y-[-50%] h-fit hidden md:block z-[99]">
                <div className="socials z-[99] space-y-3">
                <FiInstagram className="text-xl text-white hover:text-[silver] transition-all duration-200"/>
                 <FaFacebook className="text-xl text-white hover:text-[silver] transition-all duration-200"/>
@@ -93,7 +93,7 @@ const Header =()=>{
         <div className="newCollection w-full bg-white relative hidden md:block overflow-x-hidden">
             {/* <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(0,0,0,0.8)] z-[92]"></div> */}
                             <div className="newCollectionContent sticky top-[50%] z-[92]">
-                                    <h1 className=" font-questrial text-3xl md:text-6xl xl:text-8xl text-gray-900 text-right">NOWA KOLEKCJA</h1>
+                                    <h1 className=" font-questrial text-3xl md:text-6xl xl:text-8xl text-gray-950 text-right">NOWA KOLEKCJA</h1>
                                         <div className="relative ">
                                             <a href="/collections" className=""><button className="absolute right-0 md:right-10 bg-black text-white md:px-8 py-2 md:py-4 md:text-xl lg:text-3xl font-gruppo hover:rounded-2xl hover:bg-slate-800 transition-all duration-200"> KUP TERAZ</button></a>
                                         </div>
@@ -111,7 +111,7 @@ const Header =()=>{
                 <div className=" h-fit md:h-screen bg-black text-center py-10 md:py-0">
                    <div className=" relative md:top-[50%] md:translate-y-[-70%] space-y-10 md:space-y-8">
                    {/* <p className="w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur, enim eaque labore sed doloremque architecto eius debitis consequuntur sapiente quisquam ut reprehenderit, quo consequatur ipsa iusto. Ducimus, sit labore.</p> */}
-                        <h1 className=" font-megrim text-7xl lg:text-8xl text-gray-800">MEZCZYZNA</h1>
+                        <h1 className=" font-megrim text-7xl lg:text-8xl text-[silver]">MEZCZYZNA</h1>
                         <div className="w-fit mx-auto">
                                 <div className="menButtonBorder w-[40%] h-[2px] bg-[#74523f] mx-auto"></div>
                                 <Link to="/men"><button className="menButton bg-[#020202] font-sen text-[#74523f] px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200">PRZEGLĄDAJ</button></Link>
@@ -126,7 +126,7 @@ const Header =()=>{
                         <h1 className=" font-megrim text-7xl lg:text-8xl text-[#74523f]">KOBIETA</h1>
                             <div className="w-fit mx-auto">
                                 <div className="womenButtonBorder w-[40%] h-[2px] bg-gray-950 mx-auto"></div>
-                                <Link to="/women"><button className="womenButton bg-[#dfdfdf] font-sen text-gray-950 px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200">PRZEGLĄDAJ</button></Link>
+                                <Link to="/women"><button className="womenButton bg-[rgb(223,223,223)] font-sen text-gray-950 px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200">PRZEGLĄDAJ</button></Link>
                                 <div className="womenButtonBorder w-[40%] h-[2px] bg-gray-950 mx-auto"></div>
                             </div>
                             <p className="w-[70%] mx-auto text-justify font-gruppo text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, consectetur! Neque temporibus, laudantium voluptatum illo, eligendi libero possimus facere repellendus recusandae officiis exercitationem voluptatibus perferendis rem error voluptates magnam aut.</p>
@@ -136,7 +136,7 @@ const Header =()=>{
        </div>
 
         <div className=" h-fit bg-black markPasswordWrapper">
-            <div className="markPassword w-[90%] lg:w-3/4 rounded-3xl bg-gradient-to-t from-black to-gray-950 mx-auto p-4 relative top-[-30px] lg:top-[-100px]">
+            <div className="markPassword w-[90%] lg:w-3/4 rounded-3xl bg-gradient-to-t from-black to-[rgb(0,5,0)] shadow-[0px_0px_40px_0px] shadow-black mx-auto p-4 relative top-[-30px] lg:top-[-100px]">
                 <h1 className=" mx-auto text-justify text-transparent text-2xl lg:text-5xl font-megrim font-extrabold tracking-[6px] lg:tracking-[10px] leading-9 lg:leading-[60px] opacity-0">"Odkryj magiczną siłę stylu z LGTHNK - ubrania inspirowane mitologią, które wzbogacą Twoją garderobę o niezwykłą opowieść. Każdy kawałek naszej kolekcji to mistyczna podróż przez legendy i mitologie, przekształcająca modę w epicką przygodę. Ubrania LGTHNK - łącące nowoczesny design z odwiecznymi historiami, abyś mógł nosić nie tylko ubranie, ale również opowieść. Wejdź do świata LGTHNK i stwórz swoją legendę modowej ekspresji!"</h1>
                 <TypeAnimation
                 sequence={[
@@ -149,7 +149,7 @@ const Header =()=>{
                 ]}
                 speed={70}
                 repeat={Infinity}
-                className=" mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto text-center lg:text-justify text-clip text-[#864f30] text-2xl lg:text-5xl font-sen tracking-[6px] leading-9 lg:leading-[50px]"
+                className=" mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto text-center lg:text-justify text-clip text-[#7a4527] text-2xl lg:text-5xl font-sen tracking-[6px] leading-9 lg:leading-[50px]"
             />
             </div>
         </div>
@@ -160,7 +160,7 @@ const Header =()=>{
             <div className=" overflow-hidden"><h1 className=" descTitle borderedText text-[70px] md:text-[100px] lg:text-[150px] font-megrim relative left-[30%] sm:left-[45%] text-transparent">JAKOSC</h1></div>
             <div className=" overflow-hidden"><h1 className=" descTitle text-[70px] md:text-[100px] lg:text-[150px] font-megrim font-extrabold relative left-[20%] sm:left-[35%]">WYGLAD</h1></div>
         </div>
-        <div className="min-h-screen bg-black py-8 products">
+        <div className="lg:min-h-screen bg-black py-8 products">
                 <h1 className="font-megrim text-[#acacac] text-5xl lg:text-7xl xl:text-8xl  ml-[10%] productsTitle">NAJNOWSZE</h1>
                 <h1 className="font-megrim text-white text-5xl lg:text-7xl xl:text-8xl  ml-[30%] productsTitle"> PRODUKTY</h1>
                 {/* <h1 className="font-megrim text-[#555555] text-3xl sm:text-5xl lg:text-7xl xl:text-8xl  ml-[5%] productsTitle">NAJNOWSZE PRODUKTY</h1> */}
@@ -187,7 +187,7 @@ const Header =()=>{
                             </div>
                         </div>
                 <div className=" hidden md:block">
-                    <img src="https://images.unsplash.com/photo-1512551980832-13df02babc9e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+                    <img src="https://images.unsplash.com/photo-1512551980832-13df02babc9e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="h-full"/>
                 </div>
         </div>
 

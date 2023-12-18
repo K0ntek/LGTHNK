@@ -73,14 +73,14 @@ const Register =()=>{
                 <i></i>
                 </div>
 
-                <div className="flex w-[40%] mx-auto">
+                <div className="xl:flex w-[40%] mx-auto space-y-10 xl:space-y-0">
 
-                <div className="formWrapper w-[45%] flex space-x-5 justify-center relative mx-auto">
+                <div className="formWrapper xl:w-[45%] flex space-x-5 justify-center relative mx-auto">
                     <input required='required' type="text" name="mail" className="relative bg-transparent border-b-[1px] border-white w-full focus:outline-none focus:border-[silver] text-white text-2xl font-gruppo "/>
                     <span className=" absolute left-[10px] bottom-1 font-megrim text-white text-md">IMIE</span>
                 <i></i>
                 </div>
-                <div className="formWrapper w-[45%] flex space-x-5 justify-center relative mx-auto">
+                <div className="formWrapper xl:w-[45%] flex space-x-5 justify-center relative mx-auto">
                     <input required='required' type="text" name="mail" className="relative bg-transparent border-b-[1px] border-white w-full focus:outline-none focus:border-[silver] text-white text-2xl font-gruppo "/>
                     <span className=" absolute left-[10px] bottom-1 font-megrim text-white text-md">NAZWISKO</span>
                 <i></i>

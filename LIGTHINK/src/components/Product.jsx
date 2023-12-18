@@ -4,12 +4,33 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 import { Link, useParams } from "react-router-dom";
 import data from '../data.json'
 import addToBag from '../App';
+import Carousel from 'react-multi-carousel';
 
 const Product = () => {
 	
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	  }, [])
+
+	  const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 1
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1124 },
+          items: 1
+        },
+        tablet: {
+          breakpoint: { max: 1124, min: 714 },
+          items: 1
+        },
+        mobile: {
+          breakpoint: { max: 714, min: 0 },
+          items: 1
+        }
+      };
 
 	const sizes = [
 		{
@@ -128,7 +149,22 @@ const Product = () => {
 				<div>
 				<div className="grid lg:grid-cols-2 w-[80%] mx-auto">
 				<div>
-					<img src={product.image} alt='productImage' className=' rounded-xl w-full'/>
+				<Carousel 
+                    responsive={responsive}
+                    // showDots={true}
+                    swipeable={true}
+                    draggable={false}
+                    infinite={true}
+                    autoPlay={true}
+                    autoPlaySpeed={3000}
+                    >
+						{product["images"].map((element)=>{
+							return(
+								<img src={element.imageElement} alt='productImage' className=' rounded-xl w-full px-1'/>
+							)
+						})}
+                    </Carousel>
+					{/* <img src={product.image} alt='productImage' className=' rounded-xl w-full'/> */}
 				</div>
 
 			<div>

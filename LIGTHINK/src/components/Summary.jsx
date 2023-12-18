@@ -49,7 +49,7 @@ const Summary = () => {
 
                   <div className="grid grid-cols-2">
                         <div className="formWrapper flex space-x-5 justify-center relative w-[96%] mx-auto">
-                          <input required='required' type="text" name="mail" className="relative bg-transparent border-b-[1px] border-black w-full focus:outline-none focus:border-[#5a402f] text-xl font-questrial "/>
+                          <input required='required' type='email' name="mail" className="relative bg-transparent border-b-[1px] border-black w-full focus:outline-none focus:border-[#5a402f] text-xl font-questrial "/>
                           <span className=" absolute left-[10px] bottom-1 font-megrim font-bold text-black text-md">E-MAIL</span>
                         <i></i>
                         </div>
