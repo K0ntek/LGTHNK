@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import data from '../data.json'
 import addToBag from '../App';
 import Carousel from 'react-multi-carousel';
+import "react-multi-carousel/lib/styles.css";
 
 const Product = () => {
 	
