@@ -148,7 +148,7 @@ const Product = () => {
 		<div className=" w-full min-h-screen mt-[100px]">
 			{product && (
 				<div>
-				<div className="grid lg:grid-cols-2 w-[80%] mx-auto">
+				<div className="lg:grid lg:grid-cols-2 w-[80%] mx-auto">
 				<div>
 				<Carousel 
                     responsive={responsive}
