@@ -28,12 +28,12 @@ const About =()=>{
            </div>
             <div className="grid lg:grid-cols-[60%_40%] gap-3">
 
-                    <div className=" aboutSection p-7 bg-[#060606] rounded-3xl sm:ml-[-40px] sm:mr-[40px] lg:m-0">
+                    <div className=" aboutSection p-7 bg-[#080808] rounded-3xl sm:ml-[-40px] sm:mr-[40px] lg:m-0">
                         <h1 className=" font-megrim text-5xl text-[#8d6a52] ml-[10%] my-6">KIM JESTESMY?</h1>
                         <p className=" text-white text-justify text-xl font-questrial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illo sed veniam, voluptatum ipsa eius natus dolore delectus sit provident. Sapiente deserunt rem ratione? Asperiores beatae veniam quae obcaecati corporis, ea nobis quo porro delectus officia est vitae modi eveniet repudiandae ab adipisci placeat tenetur facilis ullam aperiam itaque sit.</p>
                     </div>
 
-                    <div className=" aboutSection  p-7 bg-[#020408] rounded-3xl sm:ml-[20px] msm:r-[-20px] lg:m-0">
+                    <div className=" aboutSection  p-7 bg-[#050914] rounded-3xl sm:ml-[20px] msm:r-[-20px] lg:m-0">
                         <h1 className=" font-megrim text-5xl ml-[10%] text-[#8d6a52] mb-6">NASZE CELE</h1>
                         <p className=" text-justify text-xl font-questrial text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum illo sed veniam, voluptatum ipsa eius natus dolore delectus sit provident. Sapiente deserunt rem ratione? Asperiores beatae veniam quae obcaecati corporis, ea nobis quo porro delectus officia est vitae modi eveniet repudiandae ab adipisci placeat tenetur facilis ullam aperiam itaque sit.</p>
                     </div>

@@ -28,15 +28,15 @@ const Footer =()=>{
                     <div className="grid grid-cols-2">
                         <div className=" mx-auto">
                         <h1 className=" font-gruppo font-extrabold text-2xl text-[#979797]">Kobieta</h1>
-                        <p className=" text-xl font-gruppo"> bluzy</p>
-                        <p className=" text-xl font-gruppo">koszulki</p>
-                         <p className=" text-xl font-gruppo">dresy</p>
+                        <p className=" text-xl font-gruppo hover:text-[#d3ab54]"> bluzy</p>
+                        <p className=" text-xl font-gruppo hover:text-[#d3ab54]">koszulki</p>
+                         <p className=" text-xl font-gruppo hover:text-[#d3ab54]">dresy</p>
                         </div>
                         <div className=" mx-auto">
                         <h1 className=" font-gruppo font-extrabold text-2xl text-[#979797]">Mężczyzna</h1>
-                        <p className=" text-xl font-gruppo"> bluzy</p>
-                        <p className=" text-xl font-gruppo">koszulki</p>
-                         <p className=" text-xl font-gruppo">dresy</p>
+                        <p className=" text-xl font-gruppo hover:text-[#d3ab54]"> bluzy</p>
+                        <p className=" text-xl font-gruppo hover:text-[#d3ab54]">koszulki</p>
+                         <p className=" text-xl font-gruppo hover:text-[#d3ab54]">dresy</p>
                         </div>
                     </div>
 

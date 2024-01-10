@@ -111,13 +111,38 @@ body {
 }
 
 .newCollection {
-  background: url('https://www.wavyboyclothing.com/cdn/shop/products/DSC08024.jpg?v=1666774893');
+  background: url('https://img.gta5-mods.com/q75/images/fivem-ready-mp-hoodie-chinese-collection-ee23faba-fc2d-41a0-90c2-2c1f003d66ed/28b93d-j.png');
   background-attachment: fixed;
   aspect-ratio: 16/9;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+
 .animationLogo {
   -webkit-filter: drop-shadow(5px 5px 5px #492c17);
   filter: drop-shadow(5px 5px 5px #492c17);
+  animation: animateLogo 4s both infinite;
+}
+
+
+@keyframes animateLogo{
+  0%{
+    -webkit-filter: drop-shadow(5px 5px 5px #492c17);
+  filter: drop-shadow(5px 5px 5px #492c17);
+  }
+  50%{
+    -webkit-filter: drop-shadow(10px 10px 10px #492c17);
+  filter: drop-shadow(10px 10px 10px #492c17);
+  }
+  100%{
+    -webkit-filter: drop-shadow(5px 5px 5px #492c17);
+  filter: drop-shadow(5px 5px 5px #492c17);
+  }
+}
+
+textarea::placeholder{
+  color: black;
+  font-family: "megrim";
+  font-weight: 900;
 }

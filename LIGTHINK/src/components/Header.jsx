@@ -9,6 +9,7 @@ import { FiInstagram } from 'react-icons/fi';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import NewProducts from './NewProducts';
 import { Link } from 'react-router-dom';
+import Animation from '../Animation';
 const Header = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -329,9 +330,7 @@ const Header = () => {
               CUSTOM
             </h1>
             <p className='w-1/2 text-justify mx-auto'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              perferendis eos cupiditate? Impedit, natus autem odit beatae
-              tenetur quisquam harum!
+            Masz bluzę, której chciałbyś nadać nowe życie? Odezwij się do nas !
             </p>
             <div className='w-fit mx-auto group'>
               <div className=' bg-[#854a23] w-1/2 h-[2px] mx-auto group-hover:w-full transition-all duration-200'></div>
@@ -344,11 +343,12 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className=' hidden md:block'>
-          <img
+        <div className=''>
+          {/* <img
             src='https://images.unsplash.com/photo-1512551980832-13df02babc9e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             className='h-full'
-          />
+          /> */}
+          <Animation/>
         </div>
       </div>
     </div>
