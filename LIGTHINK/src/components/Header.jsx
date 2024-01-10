@@ -329,7 +329,7 @@ const Header = () => {
             <h1 className='text-center text-7xl lg:text-9xl font-megrim text-gray-900'>
               CUSTOM
             </h1>
-            <p className='w-1/2 text-justify mx-auto'>
+            <p className='w-1/2 text-justify mx-auto font-questrial text-2xl'>
             Masz bluzę, której chciałbyś nadać nowe życie? Odezwij się do nas !
             </p>
             <div className='w-fit mx-auto group'>
