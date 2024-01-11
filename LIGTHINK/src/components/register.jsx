@@ -33,7 +33,7 @@ const Register = () => {
               sequence={[' ', 500, 'JESTEŚ JUŻ UŻYTKOWNIKIEM ?']}
               speed={60}
               delay={200}
-              className=' font-gruppo text-white text-2xl'
+              className=' font-michroma text-white text-lg'
             />
           </div>
 
@@ -78,7 +78,7 @@ const Register = () => {
             <TypeAnimation
               sequence={[' ', 500, 'JESTEŚ TU PIERWSZY RAZ ?']}
               speed={60}
-              className=' font-gruppo text-white text-2xl'
+              className=' font-michroma text-white text-lg'
             />
           </div>
 

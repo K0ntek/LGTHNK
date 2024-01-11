@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Timeline } from 'gsap/gsap-core';
 
 import { FiInstagram } from 'react-icons/fi';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
@@ -17,30 +18,15 @@ const Header = () => {
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.fromTo(
-      '.headerImage',
-      { y: '300', opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5, delay: 0.5 }
-    );
-    gsap.fromTo(
-      '.logo',
-      { y: '-200', opacity: 0 },
-      { y: 0, opacity: 1, ease: 'easeIn', delay: 0.2 }
-    );
-    gsap.fromTo(
-      '.socials',
-      { y: '100px', opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.5 }
-    );
+
+    gsap.fromTo('.headerImage', { y: '300', opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, delay: 0.5 });
+
+    gsap.fromTo('.logo', { y: '-200', opacity: 0 }, { y: 0, opacity: 1, ease: 'easeIn', delay: 0.2 });
+
+    gsap.fromTo('.socials', { y: '100px', opacity: 0 }, { y: 0, opacity: 1, duration: 0.5 });
+
     if (window.innerWidth > 700) {
-      gsap.fromTo(
-        '.descTitle',
-        { y: '100%', opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.5,
-          scrollTrigger: {
+      gsap.fromTo('.descTitle', { y: '100%', opacity: 0 }, { y: 0, opacity: 1, stagger: 0.5, scrollTrigger: {
             trigger: '.desc',
             start: 'top 60%',
             end: 'top 20%',
@@ -48,13 +34,7 @@ const Header = () => {
           },
         }
       );
-      gsap.fromTo(
-        '.productsTitle',
-        { x: '60%', opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          scrollTrigger: {
+      gsap.fromTo('.productsTitle', { x: '60%', opacity: 0 }, { x: 0, opacity: 1, scrollTrigger: {
             trigger: '.products',
             start: 'top 70%',
             end: 'top 20%',
@@ -63,30 +43,15 @@ const Header = () => {
         }
       );
     }
-    gsap.fromTo(
-      '.markPassword',
-      { x: '-300', opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: '.markPasswordWrapper',
-          start: 'top 90%',
-          end: 'top 60%',
-          scrub: 1,
-        },
+    gsap.fromTo('.markPassword', { x: '-300', opacity: 0 } , {x: 0, opacity: 1, duration: 0.5, scrollTrigger: {
+            trigger: '.markPasswordWrapper',
+            start: 'top 90%',
+            end: 'top 60%',
+            scrub: 1,
+           },
       }
     );
-    gsap.fromTo(
-      '.markPasswordContent',
-      { y: 300, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        delay: 0.5,
-        scrollTrigger: {
+    gsap.fromTo('.markPasswordContent', { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, delay: 0.5, scrollTrigger: {
           trigger: '.markPassword',
           start: 'top 60%',
           end: 'top 50%',
@@ -94,6 +59,10 @@ const Header = () => {
         },
       }
     );
+
+    let announcement = document.querySelector('.announcement')
+    let announcementWidth = announcement.innerWidth
+    gsap.fromTo('.announcement', { x:'200%'}, {x:'-200%', duration:18, repeat: Infinity, stagger:7})
 
     let tl = gsap.timeline();
     tl.fromTo(
@@ -125,12 +94,22 @@ const Header = () => {
 
     menButton.addEventListener('mouseenter', () => menButtonHover.play());
     menButton.addEventListener('mouseleave', () => menButtonHover.reverse());
+
+    let collectionButton = document.querySelector('.button');
+    let collectionButtonHover = gsap.to('.buttonBorder', {
+      width: '80%',
+      paused: true,
+      duration: 0.2,
+    });
+
+    collectionButton.addEventListener('mouseenter', () => collectionButtonHover.play());
+    collectionButton.addEventListener('mouseleave', () => collectionButtonHover.reverse());
   }, []);
 
   return (
     <div className='bg-[#020202]'>
       <div className=' header w-full min-h-screen relative mb-[10%]'>
-        <div className=' absolute right-2 top-[50%] translate-y-[-50%] h-fit hidden md:block z-[99]'>
+        <div className=' absolute right-2 top-[50%] translate-y-[-50%] h-fit hidden md:block z-[98]'>
           <div className='socials z-[99] space-y-3'>
             <FiInstagram className='text-xl text-white hover:text-[silver] transition-all duration-200' />
             <FaFacebook className='text-xl text-white hover:text-[silver] transition-all duration-200' />
@@ -179,19 +158,26 @@ const Header = () => {
           </div>
         </div>
       </div>
+          <div className='w-full bg-black flex space-x-[50%] relative'>
+          <p className='announcement text-white content-baseline text-2xl w-fit mx-auto font-megrim font-bold'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</p>
+          {/* <p className='announcement absolute text-white content-baseline text-2xl w-fit mx-auto font-megrim font-bold'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</p> */}
+          </div>
       <div className='newCollection w-full bg-white relative hidden md:block overflow-x-hidden'>
         {/* <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(0,0,0,0.8)] z-[92]"></div> */}
-        <div className='newCollectionContent sticky top-[50%] z-[92]'>
-          <h1 className=' font-questrial text-3xl md:text-6xl xl:text-8xl text-gray-950 text-right'>
+        <div className='newCollectionContent sticky top-[60%] z-[92] space-y-7 bg-black/70 w-fit mx-auto p-7'>
+          <h1 className=' font-questrial text-3xl md:text-6xl xl:text-8xl text-white text-center'>
             NOWA KOLEKCJA
           </h1>
           <div className='relative '>
-            <a href='/collections' className=''>
-              <button className='absolute right-0 md:right-10 bg-black text-white md:px-8 py-2 md:py-4 md:text-xl lg:text-3xl font-gruppo hover:rounded-2xl hover:bg-slate-800 transition-all duration-200'>
-                {' '}
-                KUP TERAZ
-              </button>
-            </a>
+          <div className='w-fit mx-auto'>
+                <div className='buttonBorder w-[40%] h-[2px] bg-[#bb602b] mx-auto'></div>
+                <Link to='/collections'>
+                  <button className='button font-sen text-[#fff] px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200'>
+                    KUP TERAZ
+                  </button>
+                </Link>
+                <div className='buttonBorder w-[40%] h-[2px] bg-[#c7c7c7] mx-auto'></div>
+              </div>
           </div>
         </div>
       </div>
@@ -329,7 +315,7 @@ const Header = () => {
             <h1 className='text-center text-7xl lg:text-9xl font-megrim text-gray-900'>
               CUSTOM
             </h1>
-            <p className='w-1/2 text-justify mx-auto font-questrial text-2xl'>
+            <p className='w-1/2 text-justify mx-auto'>
             Masz bluzę, której chciałbyś nadać nowe życie? Odezwij się do nas !
             </p>
             <div className='w-fit mx-auto group'>

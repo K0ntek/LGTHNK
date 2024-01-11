@@ -102,8 +102,8 @@ const Navbar = () => {
               {navElements.map((element, i) => {
                 return (
                   <Link to={element.link} key={i}>
-                    <div className='w-fit group'>
-                      <li className=' text-white font-questrial text-xl' onClick={windowWidth < 1024 ? hideNavbar : false} >
+                    <div className='w-fit group'  onClick={windowWidth < 1024 ? hideNavbar : false}>
+                      <li className=' text-white font-questrial text-xl'>
                         {element.title}
                       </li>
                       <div className='w-0 h-[2px] bg-white mx-auto group-hover:w-[60%] transition-all duration-200'></div>
@@ -115,7 +115,7 @@ const Navbar = () => {
             <div className='absolute bottom-[30%] right-[50%] translate-x-[50%] lg:absolute lg:top-[0px] lg:right-0 lg:translate-x-0 lg:flex space-x-2'>
               <div className='flex'>
                 <Link to={'/register'}>
-                  <BsFillPersonFill className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200' onClick={windowWidth < 1024 ? hideNavbar : false}/>
+                  <BsFillPersonFill className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200' onClick={windowWidth < 1024 ?? hideNavbar}/>
                 </Link>
                 <PiBagBold
                   className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200'
