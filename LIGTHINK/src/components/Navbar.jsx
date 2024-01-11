@@ -103,7 +103,7 @@ const Navbar = () => {
                 return (
                   <Link to={element.link} key={i}>
                     <div className='w-fit group'>
-                      <li className=' text-white font-questrial text-xl' {/*onClick={windowWidth < 1024 ?? hideNavbar}*/} >
+                      <li className=' text-white font-questrial text-xl' onClick={windowWidth < 1024 ? hideNavbar : false} >
                         {element.title}
                       </li>
                       <div className='w-0 h-[2px] bg-white mx-auto group-hover:w-[60%] transition-all duration-200'></div>
