@@ -54,8 +54,8 @@ const Animation = () => {
   }, []);
 
   return (
-    <div className='animationWrapper grid grid-cols-5 h-screen'>
-      <div className=' h-full'>
+    <div className='animationWrapper grid grid-cols-5 md:h-screen'>
+      <div className=' aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'>
           <div className=' space-y-3 relative top-[50%] translate-y-[-50%]'>
             <div className=' horizontalBlock w-full h-[2px] md:h-1 xl:h-[6px] bg-[#2b180c]'></div>
@@ -65,15 +65,15 @@ const Animation = () => {
         </div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'>
           <div className='flex space-x-3 h-full justify-center'>
             <div className=' verticalBlock w-[2px] h-full md:w-1 xl:w-[6px] bg-[#2b180c]'></div>
@@ -83,11 +83,11 @@ const Animation = () => {
         </div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'>
         <div className='flex space-x-3 h-full justify-center'>
             <div className=' verticalBlock w-[2px] h-full md:w-1 xl:w-[6px] bg-[#5a402f]'></div>
@@ -96,11 +96,11 @@ const Animation = () => {
           </div>
         </div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'>
         <div className='flex space-x-3 h-full justify-center'>
             <div className=' verticalBlock w-[2px] h-full md:w-1 xl:w-[6px] bg-[#5a402f]'></div>
@@ -109,11 +109,11 @@ const Animation = () => {
           </div>
         </div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'>
           <div className=' space-y-3 relative top-[50%] translate-y-[-50%]'>
             <div className=' horizontalBlock w-full h-[2px] md:h-1 xl:h-[6px] bg-[#5a402f]'></div>
@@ -122,14 +122,14 @@ const Animation = () => {
           </div>
         </div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'></div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'>
           <div className=' space-y-3 relative top-[50%] translate-y-[-50%]'>
             <div className=' horizontalBlock w-full h-[2px] md:h-1 xl:h-[6px] bg-[#2b180c]'></div>
@@ -147,17 +147,17 @@ const Animation = () => {
         </div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'></div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'></div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'>
           <div className=' space-y-3 relative top-[50%] translate-y-[-50%]'>
             <div className=' horizontalBlock w-full h-[2px] md:h-1 xl:h-[6px] bg-[#5a402f]'></div>
@@ -167,14 +167,14 @@ const Animation = () => {
         </div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'></div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'>
         <div className='flex space-x-3 h-full justify-center'>
             <div className=' verticalBlock w-[2px] h-full md:w-1 xl:w-[6px] bg-[#2b180c]'></div>
@@ -183,14 +183,14 @@ const Animation = () => {
           </div>
         </div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'></div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'>
         <div className='flex space-x-3 h-full justify-center'>
             <div className=' verticalBlock w-[2px] h-full md:w-1 xl:w-[6px] bg-[#2b180c]'></div>
@@ -200,7 +200,7 @@ const Animation = () => {
         </div>
       </div>
 
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='vertical w-full h-full bg-[#111]'>
           <div className=' space-y-3 relative top-[50%] translate-y-[-50%]'>
             <div className=' horizontalBlock w-full h-[2px] md:h-1 xl:h-[6px] bg-[#5a402f]'></div>
@@ -209,7 +209,7 @@ const Animation = () => {
           </div>
         </div>
       </div>
-      <div className='h-full'>
+      <div className='aspect-square md:aspect-auto md:h-full'>
         <div className='horizontal w-full h-full bg-black'></div>
       </div>
     </div>
