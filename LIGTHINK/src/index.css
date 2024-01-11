@@ -113,7 +113,7 @@ body {
 .newCollection {
   background:linear-gradient(0deg, rgba(0,0,0), rgba(58, 0, 0, 0.4)), url('https://img.gta5-mods.com/q75/images/fivem-ready-mp-hoodie-chinese-collection-ee23faba-fc2d-41a0-90c2-2c1f003d66ed/28b93d-j.png');
   background-attachment: fixed;
-  aspect-ratio: 16/9;
+  background-position-x: 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }

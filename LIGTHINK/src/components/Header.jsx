@@ -60,6 +60,8 @@ const Header = () => {
       }
     );
 
+    gsap.fromTo('.gender', {x:200, opacity:0}, {x:0, opacity:1, duration:.5, stagger:.2, scrollTrigger:{trigger:'.gendersWrapper', start:'top 40%'}})
+
     let announcement = document.querySelector('.announcement')
     let announcementWidth = announcement.innerWidth
     gsap.fromTo('.announcement', { x:'200%'}, {x:'-200%', duration:18, repeat: Infinity, stagger:7})
@@ -162,17 +164,17 @@ const Header = () => {
           <p className='announcement text-white content-baseline text-2xl w-fit mx-auto font-megrim font-bold'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</p>
           {/* <p className='announcement absolute text-white content-baseline text-2xl w-fit mx-auto font-megrim font-bold'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</p> */}
           </div>
-      <div className='newCollection w-full bg-white relative hidden md:block overflow-x-hidden'>
+      <div className='newCollection aspect-square sm:aspect-video w-full bg-white relative overflow-x-hidden'>
         {/* <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(0,0,0,0.8)] z-[92]"></div> */}
-        <div className='newCollectionContent sticky top-[60%] z-[92] space-y-7 bg-black/70 w-fit mx-auto p-7'>
-          <h1 className=' font-questrial text-3xl md:text-6xl xl:text-8xl text-white text-center'>
+        <div className='newCollectionContent absolute bottom-[10%] lg:bottom-[25%] left-[50%] translate-x-[-50%] z-[92] space-y-7 bg-black/70 w-3/4 sm:w-1/2 md:w-fit mx-auto p-7'>
+          <h1 className=' font-questrial text-2xl sm:text-3xl md:text-6xl xl:text-8xl text-white text-center'>
             NOWA KOLEKCJA
           </h1>
           <div className='relative '>
           <div className='w-fit mx-auto'>
                 <div className='buttonBorder w-[40%] h-[2px] bg-[#bb602b] mx-auto'></div>
                 <Link to='/collections'>
-                  <button className='button font-sen text-[#fff] px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200'>
+                  <button className='button font-sen text-[#fff] px-4 md:px-8 py-2 md:py-4 md:text-2xl hover:tracking-[2px] transition-all duration-200'>
                     KUP TERAZ
                   </button>
                 </Link>
@@ -196,9 +198,9 @@ const Header = () => {
           </h1>
         </div>
 
-        <div className='md:min-h-screen grid md:grid-cols-2 rounded-3xl relative space-y-0'>
-          <div className=' h-fit md:h-screen bg-black text-center py-10 md:py-0'>
-            <div className=' relative md:top-[50%] md:translate-y-[-70%] space-y-10 md:space-y-8'>
+        <div className=' md:min-h-screen grid md:grid-cols-2 rounded-3xl relative space-y-0'>
+          <div className='gendersWrapper h-fit md:h-screen bg-black text-center py-10 md:py-0'>
+            <div className='gender relative md:top-[50%] md:translate-y-[-70%] space-y-10 md:space-y-8'>
               {/* <p className="w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur, enim eaque labore sed doloremque architecto eius debitis consequuntur sapiente quisquam ut reprehenderit, quo consequatur ipsa iusto. Ducimus, sit labore.</p> */}
               <h1 className=' font-megrim text-7xl lg:text-8xl text-[silver]'>
                 MEZCZYZNA
@@ -221,8 +223,8 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <div className=' h-fit md:h-screen bg-[#e0e0e0] text-center py-10 md:py-0'>
-            <div className=' relative md:top-[50%] md:translate-y-[-30%] space-y-10 md:space-y-8'>
+          <div className='gendersWrapper h-fit md:h-screen bg-[#e0e0e0] text-center py-10 md:py-0'>
+            <div className='gender relative md:top-[50%] md:translate-y-[-30%] space-y-10 md:space-y-8'>
               <h1 className=' font-megrim text-7xl lg:text-8xl text-[#74523f]'>
                 KOBIETA
               </h1>
@@ -315,7 +317,7 @@ const Header = () => {
             <h1 className='text-center text-7xl lg:text-9xl font-megrim text-gray-900'>
               CUSTOM
             </h1>
-            <p className='w-1/2 text-justify mx-auto'>
+            <p className='w-1/2 text-justify mx-auto font-questrial text-xl'>
             Masz bluzę, której chciałbyś nadać nowe życie? Odezwij się do nas !
             </p>
             <div className='w-fit mx-auto group'>
