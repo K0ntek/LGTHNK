@@ -85,7 +85,7 @@ const Navbar = () => {
               <img
                 src={Logo}
                 className=' mx-auto w-[120px] absolute top-2 left-[50%] translate-x-[-50%] lg:left-[5%] h-auto z-[99]'
-                onClick={windowWidth < 1024 ?? hideNavbar}
+                onClick={windowWidth < 1024 ? hideNavbar : false}
               />
             </Link>
             {/* 			    <div className="w-0 h-[2px] bg-white mx-auto rounded-full hover:w-1/2 transition-all duration-200"></div> */}
@@ -115,7 +115,7 @@ const Navbar = () => {
             <div className='absolute bottom-[30%] right-[50%] translate-x-[50%] lg:absolute lg:top-[0px] lg:right-0 lg:translate-x-0 lg:flex space-x-2'>
               <div className='flex'>
                 <Link to={'/register'}>
-                  <BsFillPersonFill className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200' onClick={windowWidth < 1024 ?? hideNavbar}/>
+                  <BsFillPersonFill className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200' onClick={windowWidth < 1024 ? hideNavbar : false}/>
                 </Link>
                 <PiBagBold
                   className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200'
