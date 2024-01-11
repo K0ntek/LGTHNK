@@ -101,9 +101,9 @@ const Navbar = () => {
             <ul className='lg:flex space-x-4 w-fit mx-auto relative top-[20%] lg:top-0'>
               {navElements.map((element, i) => {
                 return (
-                  <Link to={element.link} key={i} onClick={windowWidth < 1024 ?? hideNavbar}>
+                  <Link to={element.link} key={i}>
                     <div className='w-fit group'>
-                      <li className=' text-white font-questrial text-xl'>
+                      <li className=' text-white font-questrial text-xl' {/*onClick={windowWidth < 1024 ?? hideNavbar}*/} >
                         {element.title}
                       </li>
                       <div className='w-0 h-[2px] bg-white mx-auto group-hover:w-[60%] transition-all duration-200'></div>
