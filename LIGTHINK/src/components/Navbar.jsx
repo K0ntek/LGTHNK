@@ -101,8 +101,8 @@ const Navbar = () => {
             <ul className='lg:flex space-x-4 w-fit mx-auto relative top-[20%] lg:top-0'>
               {navElements.map((element, i) => {
                 return (
-                  <Link to={element.link} key={i}>
-                    <div className='w-fit group' onClick={windowWidth < 1024 ?? hideNavbar}>
+                  <Link to={element.link} key={i} onClick={windowWidth < 1024 ?? hideNavbar}>
+                    <div className='w-fit group'>
                       <li className=' text-white font-questrial text-xl'>
                         {element.title}
                       </li>
