@@ -115,7 +115,7 @@ const Navbar = () => {
             <div className='absolute bottom-[30%] right-[50%] translate-x-[50%] lg:absolute lg:top-[0px] lg:right-0 lg:translate-x-0 lg:flex space-x-2'>
               <div className='flex'>
                 <Link to={'/register'}>
-                  <BsFillPersonFill className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200' />
+                  <BsFillPersonFill className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200' onClick={windowWidth < 1024 ?? hideNavbar}/>
                 </Link>
                 <PiBagBold
                   className='text-white text-[35px] p-2 rounded-full hover:bg-white hover:text-black transition-all duration-200'
