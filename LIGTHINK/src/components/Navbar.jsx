@@ -85,7 +85,7 @@ const Navbar = () => {
               <img
                 src={Logo}
                 className=' mx-auto w-[120px] absolute top-2 left-[50%] translate-x-[-50%] lg:left-[5%] h-auto z-[99]'
-                onClick={windowWidth < 1024 ? hideNavbar : () => {}}
+                onClick={windowWidth < 1024 ?? hideNavbar}
               />
             </Link>
             {/* 			    <div className="w-0 h-[2px] bg-white mx-auto rounded-full hover:w-1/2 transition-all duration-200"></div> */}
@@ -103,7 +103,7 @@ const Navbar = () => {
                 return (
                   <Link to={element.link} key={i}>
                     <div className='w-fit group'>
-                      <li className=' text-white font-questrial text-xl' onClick={windowWidth < 1024 ? hideNavbar : () => {}}>
+                      <li className=' text-white font-questrial text-xl' onClick={windowWidth < 1024 ?? hideNavbar}>
                         {element.title}
                       </li>
                       <div className='w-0 h-[2px] bg-white mx-auto group-hover:w-[60%] transition-all duration-200'></div>
