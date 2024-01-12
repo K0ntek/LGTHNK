@@ -60,7 +60,7 @@ const Header = () => {
       }
     );
 
-    gsap.fromTo('.gender', {x:200, opacity:0}, {x:0, opacity:1, duration:.5, stagger:.2, scrollTrigger:{trigger:'.gendersWrapper', start:'top 40%'}})
+    gsap.fromTo('.gender', {x:'-200-, opacity:0}, {x:0, opacity:1, duration:.5, stagger:.2, scrollTrigger:{trigger:'.gendersWrapper', start:'top 40%'}})
 
     let announcement = document.querySelector('.announcement')
     let announcementWidth = announcement.innerWidth
