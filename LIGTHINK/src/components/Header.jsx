@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../public/lgthnklight.png';
 import { gsap } from 'gsap';
-import { useEffect } from 'react';
+import { useEffect, useState} from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
@@ -14,6 +14,17 @@ import Animation from '../Animation';
 const Header = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const setWindowDimensions = () => {
+    setWindowWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener('resize', setWindowDimensions);
+    return () => {
+      window.removeEventListener('resize', setWindowDimensions);
+    };
   }, []);
 
   useEffect(() => {
@@ -60,9 +71,9 @@ const Header = () => {
       }
     );
 
-    let announcement = document.querySelector('.announcement')
-    let announcementWidth = announcement.innerWidth
-    gsap.fromTo('.announcement', { x:'200%'}, {x:'-200%', duration:18, repeat: Infinity, stagger:7})
+    // gsap.fromTo('.gender', {x:200, opacity:0}, {x:0, opacity:1, duration:.5, stagger:.2, scrollTrigger:{trigger:'.gendersWrapper', start:'top 40%'}})
+
+      gsap.fromTo('.announcement', { left: '100%'}, { left: '-100%', duration:14, repeat: Infinity, stagger:14, ease:'none'});
 
     let tl = gsap.timeline();
     tl.fromTo(
@@ -158,9 +169,12 @@ const Header = () => {
           </div>
         </div>
       </div>
-          <div className='w-full bg-black flex space-x-[50%] relative'>
-          <p className='announcement text-white content-baseline text-2xl w-fit mx-auto font-megrim font-bold'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</p>
-          {/* <p className='announcement absolute text-white content-baseline text-2xl w-fit mx-auto font-megrim font-bold'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</p> */}
+          <div className='relative z-[98]'>
+            <div className='w-full bg-black'>
+            <p className='flex w-[90%] text-white text-2xl my-0 mx-auto font-megrim font-bold overflow-hidden py-5'>
+              <span className='announcement whitespace-nowrap absolute top-1'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span>
+              <span className='announcement whitespace-nowrap absolute top-1'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span></p>
+            </div>
           </div>
       <div className='newCollection aspect-square sm:aspect-video w-full bg-white relative overflow-x-hidden'>
         {/* <div className="absolute w-full h-full bg-gradient-to-b from-[rgba(0,0,0,.2)] to-[rgba(0,0,0,0.8)] z-[92]"></div> */}
@@ -170,13 +184,13 @@ const Header = () => {
           </h1>
           <div className='relative '>
           <div className='w-fit mx-auto'>
-                <div className='buttonBorder w-[40%] h-[2px] bg-[#bb602b] mx-auto'></div>
+                <div className='buttonBorder w-[40%] h-[2px] bg-red-800 mx-auto'></div>
                 <Link to='/collections'>
                   <button className='button font-sen text-[#fff] px-4 md:px-8 py-2 md:py-4 md:text-2xl hover:tracking-[2px] transition-all duration-200'>
                     KUP TERAZ
                   </button>
                 </Link>
-                <div className='buttonBorder w-[40%] h-[2px] bg-[#c7c7c7] mx-auto'></div>
+                <div className='buttonBorder w-[40%] h-[2px] bg-[silver] mx-auto'></div>
               </div>
           </div>
         </div>
