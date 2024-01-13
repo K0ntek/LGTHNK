@@ -169,7 +169,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-          <div className='relative z-[98]'>
+          <div className='relative z-[98] overflow-x-hidden'>
             <div className='w-full bg-black'>
             <p className='flex w-[90%] text-white text-2xl my-0 mx-auto font-megrim font-bold overflow-hidden py-5'>
               <span className='announcement whitespace-nowrap absolute top-1'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span>
