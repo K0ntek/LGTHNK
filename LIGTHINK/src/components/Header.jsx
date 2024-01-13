@@ -73,7 +73,7 @@ const Header = () => {
 
     // gsap.fromTo('.gender', {x:200, opacity:0}, {x:0, opacity:1, duration:.5, stagger:.2, scrollTrigger:{trigger:'.gendersWrapper', start:'top 40%'}})
 
-      gsap.fromTo('.announcement', { left: '100%'}, { left: '-100%', duration:14, repeat: Infinity, stagger:14, ease:'none'});
+      gsap.fromTo('.announcement', { left: '100%'}, { left: '-1200px', duration:14, repeat: Infinity, stagger:14, ease:'none'});
 
     let tl = gsap.timeline();
     tl.fromTo(
@@ -169,11 +169,11 @@ const Header = () => {
           </div>
         </div>
       </div>
-          <div className='relative z-[98]'>
+          <div className='relative z-[98] overflow-x-hidden'>
             <div className='w-full bg-black'>
-            <p className='flex w-[90%] text-white text-2xl my-0 mx-auto font-megrim font-bold overflow-x-hidden py-5'>
-              <span className='announcement whitespace-nowrap absolute top-1'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span>
-              <span className='announcement whitespace-nowrap absolute top-1'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span></p>
+            <p className='flex w-[90%] text-white text-2xl my-0 mx-auto font-megrim font-bold py-5'>
+              <span className='announcement whitespace-nowrap absolute top-1 w-[1200px]'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span>
+              <span className='announcement whitespace-nowrap absolute top-1 w-[1200px]'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span></p>
             </div>
           </div>
       <div className='newCollection aspect-square sm:aspect-video w-full bg-white relative overflow-x-hidden'>
