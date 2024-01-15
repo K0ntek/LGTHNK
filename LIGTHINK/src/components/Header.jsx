@@ -323,8 +323,8 @@ const Header = () => {
       </div>
 
       <div className='min-h-screen bg-white grid md:grid-cols-2 text-black '>
-        <div className=' mx-auto w-full py-7'>
-          <div className='sticky top-[50%] space-y-7'>
+        <div className=' mx-auto w-full'>
+          <div className='sticky top-[50%] space-y-7 py-7'>
             {/* <div className="absolute h-[100%] w-1 bg-[#492914] right-0"></div> */}
             <h1 className='text-center text-7xl lg:text-9xl font-megrim text-gray-900'>
               CUSTOM
