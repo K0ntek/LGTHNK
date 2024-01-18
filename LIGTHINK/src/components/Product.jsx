@@ -6,6 +6,7 @@ import data from '../data.json'
 import addToBag from '../App';
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
+import gsap from 'gsap';
 
 const Product = () => {
 	
@@ -14,23 +15,11 @@ const Product = () => {
 	  }, [])
 
 	  const responsive = {
-        superLargeDesktop: {
-          // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 1
-        },
+
         desktop: {
-          breakpoint: { max: 3000, min: 1124 },
+          breakpoint: { max: 4000, min: 0 },
           items: 1
         },
-        tablet: {
-          breakpoint: { max: 1124, min: 714 },
-          items: 1
-        },
-        mobile: {
-          breakpoint: { max: 714, min: 0 },
-          items: 1
-        }
       };
 
 	const sizes = [
@@ -144,36 +133,52 @@ const Product = () => {
 		setProduct(data.find((product) => product.id === parseInt(id)));
 	}, [])
 
+	const scrollToTable=()=>{
+		const table = document.querySelector('.tableWrapper')
+		table.scrollIntoView({behavior:"smooth"})
+	}
+
+
 	return (
 		<div className=" w-full min-h-screen mt-[100px]">
 			{product && (
 				<div>
 				<div className="lg:grid lg:grid-cols-2 w-[80%] mx-auto">
-				<div>
-				<Carousel 
-                    responsive={responsive}
-                    // showDots={true}
-                    swipeable={true}
-                    draggable={false}
-                    infinite={true}
-                    autoPlay={true}
-                    autoPlaySpeed={3000}
-                    >
-						{product["images"].map((element)=>{
+				<div className='flex'>
+				<div className=' space-y-3'>
+					{product["images"].map((element)=>{
 							return(
-								<img src={element.imageElement} alt='productImage' className=' rounded-xl w-full px-1'/>
+								<img src={element.imageElement} alt='productImage' className=' rounded-xl sm:w-full px-1 aspect-square'/>
 							)
 						})}
-                    </Carousel>
+					</div>
+					<div className='w-5/6'>
+						<Carousel 
+							responsive={responsive}
+							// showDots={true}
+							swipeable={true}
+							draggable={false}
+							infinite={true}
+							autoPlay={true}
+							autoPlaySpeed={3000}
+							className='imagesGallery'
+							>
+								{product["images"].map((element)=>{
+									return(
+										<img src={element.imageElement} alt='productImage' className=' rounded-xl w-full px-1'/>
+									)
+								})}
+							</Carousel>
+					</div>
 					{/* <img src={product.image} alt='productImage' className=' rounded-xl w-full'/> */}
 				</div>
 
 			<div>
 				<div className=" relative top-[10%] ml-[10%]">
-					<h1 className=" font-gruppo text-4xl">{product.title}</h1>
-					<p className=" ml-4 font-gruppo text-3xl">{product.price * counter} zł</p>
+					<h1 className=" font-poppins font-extrabold text-4xl">{product.title}</h1>
+					<p className="mt-6 ml-4 font-questrial text-2xl">{product.price * counter} PLN</p>
 
-					<div className=" mt-6">
+					{/* <div className=" mt-6">
 						<p className="font-megrim font-bold text-xl ml-3">LICZBA SZTUK</p>
 						<div className="flex space-x-2 border-[1px] w-fit border-black">
 							<button className=" px-6 py-2 text-lg hover:bg-gray-100" onClick={decrease}>
@@ -184,20 +189,20 @@ const Product = () => {
 								<AiOutlinePlus />
 							</button>
 						</div>
-					</div>
+					</div> */}
 
-					<div className="my-6">
-						<h1 className=" font-megrim font-bold text-xl ml-3">ROZMIAR</h1>
-						<div className=" flex space-x-3">
+					<div className="mt-6 mb-4">
+						{/* <h1 className=" font-questrial font-bold text-xl ml-3">ROZMIAR</h1> */}
+						<div className=" flex space-x-2">
 							{sizes.map((element) => {
 								return (
 									<div key={element.id} className={``}>
 										<div
 											className={`${
 												activeSize == element.id ? 'activeSize' : ''
-											} size  w-[40px] border-2 border-[silver] text-center cursor-pointer hover:border-black`}
+											} size  w-[50px] h-[35px] border-2 border-[silver] text-center cursor-pointer rounded-lg hover:border-black`}
 											onClick={() => changeActiveSize(element.id)}>
-											<button className={`font-megrim font-extrabold text-center`}>
+											<button className={`font-megrim font-extrabold text-center text-xl`}>
 												{element.size}
 											</button>
 										</div>
@@ -205,13 +210,32 @@ const Product = () => {
 								);
 							})}
 						</div>
+						
+						<div className='w-fit group' onClick={scrollToTable}>
+							<p className=' font-poppins mt-4 cursor-pointer w-fit text-sm'>Tabela rozmiarów</p>
+							<div className='w-0 h-[1px] bg-black group-hover:w-full transition-all duration-150'></div>
+						</div>
 					</div>
 
+					<div className='grid grid-cols-5 w-[300px] my-3'>
+						{product["colors"]?.map((element)=>{
+									return(
+										<div className='group'>
+											<div className='w-full aspect-[9/20] relative overflow-hidden' style={{background: `${element.color}`}}>
+												<div className=' absolute top-0 left-0 w-full h-full group-hover:bg-gradient-to-t from-black/30 to-transparent'>
+													<div><p className=' absolute bottom-[-20px] left-[50%] translate-x-[-50%] font-questrial text-sm text-white group-hover:bottom-[30px] transition-all duration-200'>{element.colorName}</p></div>
+												</div>
+											</div>
+										</div>
+									)
+								})}
+						</div>
+
 					<div className=" flex space-x-8 mb-12">
-						<button className=" border-2 border-[#58321b] px-4 py-2 hover:rounded-2xl transition-all duration-100" onclick={addToBag}>
+						<button className=" border-2 border-[#000] px-4 py-2 hover:rounded-2xl transition-all duration-100" onclick={addToBag}>
 							DO KOSZYKA
 						</button>
-						<button className=" border-2 border-[#58321b] bg-[#58321b] text-white px-4 py-2 hover:rounded-2xl transition-all duration-100">
+						<button className=" border-2 border-[#000] bg-[#000] text-white px-4 py-2 hover:rounded-2xl transition-all duration-100">
 							KUP TERAZ
 						</button>
 					</div>
@@ -229,7 +253,7 @@ const Product = () => {
 				</div>
 				</div>
 
-				<div className='mt-8'>
+				<div className='tableWrapper mt-8'>
 					<h1 className=' font-megrim text-white text-3xl my-5 ml-[10%]'>TABELA ROZMIAROW</h1>
 					{/* {sizeTable.map((element, i)=>{ */}
 						{/* return( */}
@@ -333,7 +357,7 @@ const Product = () => {
 							<p className='text-justify mt-4 font-questrial text-xl' >{product.description}</p>
 						</div>
 
-						<div className='w-[95%] mx-auto p-6 bg-[#030303] md:shadow-[-20px_20px_37px_-26px] md:shadow-white rounded-3xl relative md:left-[-40px] z-[5]'>
+						<div className='w-[95%] mx-auto p-6 bg-[#030303] rounded-3xl relative md:left-[40px] z-[5]'>
 							<h1 className=' text-3xl font-megrim ml-[10%]'>DOSTAWA</h1>
 								<div className=" font-questrial text-xl">
 									<p className='text-justify mt-4'>Dbamy o to, aby Twoja bluza dotarła do Ciebie szybko, bezpiecznie i z pełnym zadowoleniem. Oto szczegóły dotyczące dostawy:</p>

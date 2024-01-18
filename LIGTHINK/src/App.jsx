@@ -17,6 +17,7 @@ import Men from './components/Men';
 import Women from './components/Women';
 import Custom from './components/Custom';
 import Summary from './components/Summary';
+import Scroller from './Scroller';
 
 function App() {
   const [productsInBag, setProducts] = useState([]);
@@ -41,6 +42,7 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
+        <Scroller/>
         <Routes>
           <Route path='/' element={<Header />} />
           <Route path='/register' element={<Register />} />

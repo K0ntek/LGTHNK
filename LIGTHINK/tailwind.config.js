@@ -14,7 +14,8 @@ export default {
       'audiowide' : ['Audiowide'],
       'tektur' : ['Tektur'],
       'unbounded' : ['Unbounded'],
-      'sen' : ['Sen']
+      'sen' : ['Sen'],
+      'poppins' : ['Poppins']
 
     }
   },

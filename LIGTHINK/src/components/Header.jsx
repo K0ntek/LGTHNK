@@ -227,7 +227,7 @@ const Header = () => {
                 <div className='menButtonBorder w-[40%] h-[2px] bg-[#74523f] mx-auto'></div>
               </div>
               {/* <Link to="/men"><button className=" font-sen border-[2px] border-[#74523f] text-[#74523f] px-8 py-4 text-2xl hover:rounded-2xl transition-all duration-200">PRZEGLĄDAJ</button></Link> */}
-              <p className='w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo text-lg'>
+              <p className='w-[70%] mx-auto text-justify text-[#e0e0e0] font-poppins text-lg'>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Consectetur tenetur, enim eaque labore sed doloremque architecto
                 eius debitis consequuntur sapiente quisquam ut reprehenderit,
@@ -249,7 +249,7 @@ const Header = () => {
                 </Link>
                 <div className='womenButtonBorder w-[40%] h-[2px] bg-gray-950 mx-auto'></div>
               </div>
-              <p className='w-[70%] mx-auto text-justify font-gruppo text-lg'>
+              <p className='w-[70%] mx-auto text-justify font-poppins text-lg'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
                 consectetur! Neque temporibus, laudantium voluptatum illo,
                 eligendi libero possimus facere repellendus recusandae officiis
@@ -283,7 +283,7 @@ const Header = () => {
             ]}
             speed={70}
             repeat={Infinity}
-            className=' mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto text-center lg:text-justify text-clip text-[#7a4527] text-2xl lg:text-5xl font-sen tracking-[6px] leading-9 lg:leading-[50px]'
+            className=' mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto text-clip lg:text-justify text-clip text-[#7a4527] text-2xl lg:text-5xl font-sen tracking-[6px] leading-9 lg:leading-[50px]'
           />
         </div>
       </div>
