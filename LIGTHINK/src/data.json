@@ -23,23 +23,28 @@
         "colors" : [
             {
                 "color": "#12312b",
-                "colorName": "Zielony"
+                "colorName": "Zielony",
+                "id": 0
             },
             {
                 "color": "#000",
-                "colorName": "Czarny"
+                "colorName": "Czarny",
+                "id": 1
             },
             {
                 "color": "#EAEFF2",
-                "colorName": "Biały"
+                "colorName": "Biały",
+                "id": 2
             },
             {
                 "color": "#281b0d",
-                "colorName": "Brązowy"
+                "colorName": "Brązowy",
+                "id": 3
             },
             {
                 "color": "#333",
-                "colorName": "Szary"
+                "colorName": "Szary",
+                "id": 4
             }
         ]
     },
@@ -60,26 +65,31 @@
         "composition ": [
             {"compositionElement": "bawełna - 100%"}
         ],
-        "colors" : [
+          "colors" : [
             {
                 "color": "#12312b",
-                "colorName": "Zielony"
+                "colorName": "Zielony",
+                "id": 0
             },
             {
                 "color": "#000",
-                "colorName": "Czarny"
+                "colorName": "Czarny",
+                "id": 1
             },
             {
-                "color": "#fff",
-                "colorName": "Biały"
+                "color": "#EAEFF2",
+                "colorName": "Biały",
+                "id": 2
             },
             {
                 "color": "#281b0d",
-                "colorName": "Brązowy"
+                "colorName": "Brązowy",
+                "id": 3
             },
             {
                 "color": "#333",
-                "colorName": "Szary"
+                "colorName": "Szary",
+                "id": 4
             }
         ]
     },
@@ -102,23 +112,28 @@
         "colors" : [
             {
                 "color": "#12312b",
-                "colorName": "Zielony"
+                "colorName": "Zielony",
+                "id": 0
             },
             {
                 "color": "#000",
-                "colorName": "Czarny"
+                "colorName": "Czarny",
+                "id": 1
             },
             {
-                "color": "#fff",
-                "colorName": "Biały"
+                "color": "#EAEFF2",
+                "colorName": "Biały",
+                "id": 2
             },
             {
                 "color": "#281b0d",
-                "colorName": "Brązowy"
+                "colorName": "Brązowy",
+                "id": 3
             },
             {
                 "color": "#333",
-                "colorName": "Szary"
+                "colorName": "Szary",
+                "id": 4
             }
         ]
     },
@@ -139,23 +154,28 @@
         "colors" : [
             {
                 "color": "#12312b",
-                "colorName": "Zielony"
+                "colorName": "Zielony",
+                "id": 0
             },
             {
                 "color": "#000",
-                "colorName": "Czarny"
+                "colorName": "Czarny",
+                "id": 1
             },
             {
-                "color": "#fff",
-                "colorName": "Biały"
+                "color": "#EAEFF2",
+                "colorName": "Biały",
+                "id": 2
             },
             {
                 "color": "#281b0d",
-                "colorName": "Brązowy"
+                "colorName": "Brązowy",
+                "id": 3
             },
             {
                 "color": "#333",
-                "colorName": "Szary"
+                "colorName": "Szary",
+                "id": 4
             }
         ]
     },
@@ -176,23 +196,28 @@
         "colors" : [
             {
                 "color": "#12312b",
-                "colorName": "Zielony"
+                "colorName": "Zielony",
+                "id": 0
             },
             {
                 "color": "#000",
-                "colorName": "Czarny"
+                "colorName": "Czarny",
+                "id": 1
             },
             {
-                "color": "#fff",
-                "colorName": "Biały"
+                "color": "#EAEFF2",
+                "colorName": "Biały",
+                "id": 2
             },
             {
                 "color": "#281b0d",
-                "colorName": "Brązowy"
+                "colorName": "Brązowy",
+                "id": 3
             },
             {
                 "color": "#333",
-                "colorName": "Szary"
+                "colorName": "Szary",
+                "id": 4
             }
         ]
     }
