@@ -12,7 +12,7 @@ const Footer =()=>{
             <div className="rounded-b-3xl bg-black w-full">
                 <div className="bg-black py-[100px] w-[80%] mx-auto md:grid-cols-3 grid space-y-10 text-white justify-center">
                 <div className=" mx-auto">
-                    <h1 className=" font-gruppo text-center text-2xl mb-3 text-[silver]">KONTAKT</h1>
+                    <h1 className=" font-gruppo text-center text-2xl mb-3 text-[#88502b]">KONTAKT</h1>
                         <p className=" font-questrial text-xl flex "><AiOutlineMail className=" mt-1 mr-3"/> ligthink@gmail.com</p>
                         <p className=" font-questrial text-xl flex "> <BsTelephoneFill className=" mt-1 mr-3"/> 123 456 789</p>
                     </div>
@@ -27,16 +27,16 @@ const Footer =()=>{
 
                     <div className="grid grid-cols-2">
                         <div className=" mx-auto">
-                        <h1 className=" font-gruppo font-extrabold text-2xl text-[#979797]">Kobieta</h1>
-                        <p className=" text-xl font-gruppo hover:text-[#d3ab54]"> bluzy</p>
-                        <p className=" text-xl font-gruppo hover:text-[#d3ab54]">koszulki</p>
-                         <p className=" text-xl font-gruppo hover:text-[#d3ab54]">dresy</p>
+                        <h1 className=" font-gruppo font-extrabold text-2xl text-[#4b2a15]">Kobieta</h1>
+                        <p className=" text-xl font-gruppo hover:text-[#88502b]"> bluzy</p>
+                        <p className=" text-xl font-gruppo hover:text-[#88502b]">koszulki</p>
+                         <p className=" text-xl font-gruppo hover:text-[#88502b]">dresy</p>
                         </div>
                         <div className=" mx-auto">
-                        <h1 className=" font-gruppo font-extrabold text-2xl text-[#979797]">Mężczyzna</h1>
-                        <p className=" text-xl font-gruppo hover:text-[#d3ab54]"> bluzy</p>
-                        <p className=" text-xl font-gruppo hover:text-[#d3ab54]">koszulki</p>
-                         <p className=" text-xl font-gruppo hover:text-[#d3ab54]">dresy</p>
+                        <h1 className=" font-gruppo font-extrabold text-2xl text-[#4b2a15]">Mężczyzna</h1>
+                        <p className=" text-xl font-gruppo hover:text-[#88502b]"> bluzy</p>
+                        <p className=" text-xl font-gruppo hover:text-[#88502b]">koszulki</p>
+                         <p className=" text-xl font-gruppo hover:text-[#88502b]">dresy</p>
                         </div>
                     </div>
 

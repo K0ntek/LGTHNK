@@ -32,8 +32,8 @@ body {
   transition: 0.3s;
 }
 
-.formWrapper input:valid ~ span,
-.formWrapper input:focus ~ span {
+.formWrapper input:valid~span,
+.formWrapper input:focus~span {
   transform: translateY(-30px);
   color: #916245;
   letter-spacing: 1px;
@@ -87,9 +87,11 @@ body {
   0% {
     color: #090909;
   }
+
   50% {
     color: rgba(134, 134, 134, 0.1);
   }
+
   100% {
     color: #090909;
   }
@@ -112,7 +114,7 @@ body {
 }
 
 .newCollection {
-  background:linear-gradient(0deg, rgba(0,0,0), rgba(58, 0, 0, 0.4)), url('https://img.gta5-mods.com/q75/images/fivem-ready-mp-hoodie-chinese-collection-ee23faba-fc2d-41a0-90c2-2c1f003d66ed/28b93d-j.png');
+  background: linear-gradient(0deg, rgba(0, 0, 0), rgba(58, 0, 0, 0.4)), url('https://img.gta5-mods.com/q75/images/fivem-ready-mp-hoodie-chinese-collection-ee23faba-fc2d-41a0-90c2-2c1f003d66ed/28b93d-j.png');
   background-attachment: fixed;
   background-position-x: 50%;
   background-size: cover;
@@ -127,28 +129,31 @@ body {
 }
 
 
-@keyframes animateLogo{
-  0%{
+@keyframes animateLogo {
+  0% {
     -webkit-filter: drop-shadow(5px 5px 5px #492c17);
-  filter: drop-shadow(5px 5px 5px #492c17);
+    filter: drop-shadow(5px 5px 5px #492c17);
   }
-  50%{
+
+  50% {
     -webkit-filter: drop-shadow(10px 10px 10px #492c17);
-  filter: drop-shadow(10px 10px 10px #492c17);
+    filter: drop-shadow(10px 10px 10px #492c17);
   }
-  100%{
+
+  100% {
     -webkit-filter: drop-shadow(5px 5px 5px #492c17);
-  filter: drop-shadow(5px 5px 5px #492c17);
+    filter: drop-shadow(5px 5px 5px #492c17);
   }
 }
 
-textarea::placeholder{
+textarea::placeholder {
   color: black;
   font-family: "megrim";
   font-weight: 900;
 }
 
-.activeColor{
-  border-radius: 16px;
-  box-shadow: 0px 0px 5px 0px silver;
+.activeColor {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px #9e4607;
+  border: 2px solid #9e4607;
 }

@@ -148,7 +148,7 @@ const Product = () => {
 		<div className=" w-full min-h-screen mt-[100px]">
 			{product && (
 				<div>
-				<div className="lg:grid lg:grid-cols-2 w-[80%] mx-auto">
+				<div className="lg:grid lg:grid-cols-2 lg:w-[80%] w-full mx-auto">
 				<div className='flex'>
 				<div className=' space-y-3'>
 					{product["images"].map((element)=>{
@@ -205,7 +205,7 @@ const Product = () => {
 										<div
 											className={`${
 												activeSize == element.id ? 'activeSize' : ''
-											} size  w-[50px] h-[35px] border-2 border-[silver] text-center cursor-pointer rounded-lg hover:border-black`}
+											} size w-[45px] h-[30px] sm:w-[50px] sm:h-[35px] border-2 border-[silver] text-center cursor-pointer rounded-lg hover:border-black`}
 											onClick={() => changeActiveSize(element.id)}>
 											<button className={`font-megrim font-extrabold text-center text-xl`}>
 												{element.size}
@@ -349,7 +349,7 @@ const Product = () => {
 				</div>
 
 				<div className="grid lg:grid-cols-2 text-white w-[100%] mx-auto gap-5 mt-8 relative lg:top-[20px] ">
-						<div className='w-[95%] mx-auto p-6 bg-[#020202] text-[#cf956e] rounded-3xl z-[5] shadow-2xl shadow-gray-900'>
+						<div className='w-[95%] mx-auto p-6 bg-[#020202] text-[silver] rounded-3xl z-[5] shadow-2xl shadow-gray-900'>
 							<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>SKLAD</h1>
 							<div className="font-questrial">
 									<div>
@@ -365,12 +365,12 @@ const Product = () => {
 									</div>
 							</div>
 						</div>
-						<div className='w-[95%] mx-auto p-6 bg-[#DAE3E5] text-[#3b2516] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[60px] z-[5] shadow-xl shadow-gray-800'>
+						<div className='w-[95%] mx-auto p-6 bg-[#DAE3E5] text-[#88502b] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[60px] z-[5] shadow-xl shadow-gray-800'>
 							<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>O PRODUKCIE</h1>
 							<p className='text-justify mt-4 font-questrial text-xl' >{product.description}</p>
 						</div>
 
-						<div className='w-[95%] mx-auto p-6 bg-[#060913] text-[#cf956e] rounded-3xl relative lg:left-[40px] z-[5] shadow-lg shadow-gray-950'>
+						<div className='w-[95%] mx-auto p-6 bg-[#060913] text-[silver] rounded-3xl relative lg:left-[40px] z-[5] shadow-lg shadow-gray-950'>
 							<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>DOSTAWA</h1>
 								<div className=" font-questrial text-xl">
 									<p className='text-justify mt-4'>Dbamy o to, aby Twoja bluza dotarła do Ciebie szybko, bezpiecznie i z pełnym zadowoleniem. Oto szczegóły dotyczące dostawy:</p>
