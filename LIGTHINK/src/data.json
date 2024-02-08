@@ -22,7 +22,7 @@
         ],
         "colors" : [
             {
-                "color": "#12312b",
+                "color": "#013220",
                 "colorName": "Zielony",
                 "id": 0
             },
@@ -32,7 +32,7 @@
                 "id": 1
             },
             {
-                "color": "#EAEFF2",
+                "color": "#fff",
                 "colorName": "Biały",
                 "id": 2
             },

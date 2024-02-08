@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import data from '../data.json'
 import {AiOutlineMinus, AiOutlinePlus} from 'react-icons/ai'
+import { formatCurrency } from "../utilities/formatCurrency"
 
 
 const ProductsInBag = () => {
@@ -26,9 +27,11 @@ const ProductsInBag = () => {
 	};
     return(
         <div className=' overflow-y-scroll'>
-            {data.length ===0 && (
-                <h1 className=' text-5xl font-questrial mt-[20%]'>Twój koszyk jest pusty</h1>
-            )}
+             {/* {( CartItems.reduce((total, cartItem) => {
+                const item = data.find(i => i.id === cartItem.id)
+                return total + (item?.price || 0)
+              }, 0))} */}
+
             {data.map((product)=>{
                 return(
                     <div key={product.id} className=' my-7 flex space-x-4'>

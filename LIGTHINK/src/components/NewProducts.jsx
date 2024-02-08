@@ -29,7 +29,7 @@ const NewProducts =()=>{
                 {data.map((element)=>{
                     return(
                         <Link to={`/product/${element.id}`}>
-                            <div id={element.id} className="hidden lg:block rounded-3xl my-[10%] bg-[#070707] pb-8 hover:bg-[#0a0a0a] hover:rounded-xl transition-all duration-100 overflow-hidden">
+                            <div key={element.id} id={element.id} className="hidden lg:block rounded-3xl my-[10%] bg-[#070707] pb-8 hover:bg-[#0a0a0a] hover:rounded-xl transition-all duration-100 overflow-hidden">
                             <img src={element.image} alt="product" className="w-full"/>
                             <div className=" text-white w-[90%] mx-auto mt-4">
                                 <h1 className=" font-questrial font-light text-2xl">{element.title}</h1>
