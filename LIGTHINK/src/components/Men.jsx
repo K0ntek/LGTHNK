@@ -2,48 +2,62 @@ import React,{useEffect} from "react";
 import CategoryProducts from "./categoryProducts";
 import { Link } from "react-scroll";
 
-const Men =()=>{
+export const categoriesBackgrounds = [
+  {
+    id: 1,
+    "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "KOLEKCJA EGIPSKA",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
+    // products: <CategoryProducts/>
+  },
+  {
+    id: 2,
+    "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "KOLEKCJA RZYMSKA",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
+    // products: <CategoryProducts/>
+  },
+  {
+    id: 3,
+    "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "KOLEKCJA NORDYCKA",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
+    // products: <CategoryProducts/>
+  },
+  {
+    id: 4,
+    "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "KOLEKCJA NIEMIECKA",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
+    // products: <CategoryProducts/>
+  },
+  {
+    id: 5,
+    "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "KOLEKCJA AZJATYCKA",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
+    // products: <CategoryProducts/>
+  }
+]
+
+const Men=()=>{
     useEffect(() => {
 		window.scrollTo(0, 0)
 	  }, [])
 
-    const categoriesBackgrounds = [
-      {
-        id: "egypt",
-        "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "KOLEKCJA EGIPSKA",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-        products: <CategoryProducts/>
-      },
-      {
-        id: "rome",
-        "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "KOLEKCJA RZYMSKA",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-        products: <CategoryProducts/>
-      },
-      {
-        id: "nordic",
-        "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "KOLEKCJA NORDYCKA",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-        products: <CategoryProducts/>
-      },
-      {
-        id: "german",
-        "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "KOLEKCJA NIEMIECKA",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-        products: <CategoryProducts/>
-      },
-      {
-        id: "asian",
-        "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        name: "KOLEKCJA AZJATYCKA",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-        products: <CategoryProducts/>
-      }
-    ]
+    // const StartImage =()=>{
+    //   return(
+    //     <>
+    //       {categoriesBackgrounds.map((image, i)=>{
+    //         return(
+    //           <div className=" md:row-span-2 md:col-span-2 m-0 p-0 overflow-hidden rounded-[40px]">
+    //                 <img src={image.startImage} alt="dasasd" className="rounded-[40px]"/>
+    //             </div>
+    //         )
+    //       })}
+    //     </>
+    //   )
+    // }
 
     const buttons=[
       {
@@ -73,7 +87,7 @@ const Men =()=>{
       }
     ]
     return(
-       <div className="min-h-screen bg-black py-8">
+       <div className="min-h-screen bg-[#111] py-8">
           <div className="menBanner relative h-screen bg-center">
             <div className=" mx-auto relative top-[30%] space-y-[10%]">
                   <div className=" space-y-10">
@@ -109,7 +123,7 @@ const Men =()=>{
                         </div>
                     </div>
                   </div>
-                  {bgElement.products}
+                  <CategoryProducts/>
                 </div>
               )
             })}

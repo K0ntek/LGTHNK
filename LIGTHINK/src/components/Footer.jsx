@@ -12,7 +12,7 @@ const Footer =()=>{
             <div className="rounded-b-3xl bg-black w-full">
                 <div className="bg-black py-[100px] w-[80%] mx-auto md:grid-cols-3 grid space-y-10 text-white justify-center">
                 <div className=" mx-auto">
-                    <h1 className=" font-gruppo text-center text-2xl mb-3 text-[#88502b]">KONTAKT</h1>
+                    <h1 className=" font-questrial text-center text-2xl mb-3 text-gray-500">KONTAKT</h1>
                         <p className=" font-questrial text-xl flex "><AiOutlineMail className=" mt-1 mr-3"/> ligthink@gmail.com</p>
                         <p className=" font-questrial text-xl flex "> <BsTelephoneFill className=" mt-1 mr-3"/> 123 456 789</p>
                     </div>
@@ -27,16 +27,16 @@ const Footer =()=>{
 
                     <div className="grid grid-cols-2">
                         <div className=" mx-auto">
-                        <h1 className=" font-gruppo font-extrabold text-2xl text-[#4b2a15]">Kobieta</h1>
-                        <p className=" text-xl font-gruppo hover:text-[#88502b]"> bluzy</p>
-                        <p className=" text-xl font-gruppo hover:text-[#88502b]">koszulki</p>
-                         <p className=" text-xl font-gruppo hover:text-[#88502b]">dresy</p>
+                        <h1 className=" font-questrial text-2xl text-gray-500">Kobieta</h1>
+                        <p className=" text-xl font-gruppo hover:text-gray-400"> bluzy</p>
+                        <p className=" text-xl font-gruppo hover:text-gray-400">koszulki</p>
+                         <p className=" text-xl font-gruppo hover:text-gray-400">dresy</p>
                         </div>
                         <div className=" mx-auto">
-                        <h1 className=" font-gruppo font-extrabold text-2xl text-[#4b2a15]">Mężczyzna</h1>
-                        <p className=" text-xl font-gruppo hover:text-[#88502b]"> bluzy</p>
-                        <p className=" text-xl font-gruppo hover:text-[#88502b]">koszulki</p>
-                         <p className=" text-xl font-gruppo hover:text-[#88502b]">dresy</p>
+                        <h1 className=" font-questrial text-2xl text-gray-500">Mężczyzna</h1>
+                        <p className=" text-xl font-gruppo hover:text-gray-400"> bluzy</p>
+                        <p className=" text-xl font-gruppo hover:text-gray-400">koszulki</p>
+                         <p className=" text-xl font-gruppo hover:text-gray-400">dresy</p>
                         </div>
                     </div>
 
@@ -46,9 +46,9 @@ const Footer =()=>{
             <div className="text-center py-3 space-y-2 bg-gradient-to-t from-[#020101] to-black">
                     {/* <h1 className=" text-xl font-questrial text-[silver]">OBSERWUJ NAS</h1> */}
                     <div className="flex space-x-3 justify-center">
-                        <FiInstagram className="text-2xl text-[silver] hover:text-white transition-all duration-200"/>
-                        <FaFacebook className="text-2xl text-[silver] hover:text-white transition-all duration-200"/>
-                        <FaTwitter className="text-2xl text-[silver] hover:text-white transition-all duration-200"/>
+                        <FiInstagram className="text-2xl text-[silver] hover:text-gray-500 transition-all duration-200"/>
+                        <FaFacebook className="text-2xl text-[silver] hover:text-gray-500 transition-all duration-200"/>
+                        <FaTwitter className="text-2xl text-[silver] hover:text-gray-500 transition-all duration-200"/>
                     </div>
                     <p className="text-white"> © <span className=" font-gruppo">LGTHNK 2023</span></p>
                 </div>

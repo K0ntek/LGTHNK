@@ -143,58 +143,48 @@ const Product = () => {
 		table.scrollIntoView({behavior:"smooth"})
 	}
 
-
 	return (
-		<div className=" w-full min-h-screen mt-[100px]">
+		<div className=" w-full min-h-screen mt-[60px] bg-[#efefef]">
 			{product && (
 				<div>
-				<div className="lg:grid lg:grid-cols-2 lg:w-[80%] w-full mx-auto">
-				<div className='flex'>
-				<div className=' space-y-3'>
-					{product["images"].map((element)=>{
-							return(
-								<img src={element.imageElement} alt='productImage' className=' rounded-xl sm:w-full px-1 aspect-square'/>
-							)
-						})}
-					</div>
-					<div className='w-5/6'>
-						<Carousel 
-							responsive={responsive}
-							// showDots={true}
-							swipeable={true}
-							draggable={false}
-							infinite={true}
-							autoPlay={true}
-							autoPlaySpeed={3000}
-							className='imagesGallery'
-							>
-								{product["images"].map((element)=>{
+				<div className="lg:grid lg:grid-cols-2 lg:w-[90%] gap-[30px] w-full mx-auto">
+				<div className=' relative'>
+				<div className='flex py-8 sticky top-[10%]'>
+					<div className=' space-y-3'>
+							{product["images"].map((element)=>{
 									return(
-										<img src={element.imageElement} alt='productImage' className=' rounded-xl w-full px-1'/>
+										<div className=' space-y-3'>
+											<img src={element.imageElement} alt='productImage' className=' rounded-xl sm:w-full px-1 aspect-square'/>
+										</div>
 									)
 								})}
-							</Carousel>
-					</div>
+							</div>
+							<div className='w-5/6'>
+								<Carousel 
+									responsive={responsive}
+									// showDots={true}
+									swipeable={true}
+									draggable={false}
+									infinite={true}
+									autoPlay={true}
+									autoPlaySpeed={3000}
+									className='imagesGallery sticky'
+									>
+										{product["images"].map((element)=>{
+											return(
+												<img src={element.imageElement} alt='productImage' className=' rounded-xl w-full px-1'/>
+											)
+										})}
+									</Carousel>
+							</div>
 					{/* <img src={product.image} alt='productImage' className=' rounded-xl w-full'/> */}
 				</div>
+				</div>
 
-			<div>
-				<div className=" relative top-[10%] ml-[10%]">
+			<div className=' mt-[10%] py-8'>
+				<div className=" relative ml-[10%]">
 					<h1 className=" font-poppins font-extrabold text-4xl">{product.title}</h1>
 					<p className="mt-6 ml-4 font-questrial text-2xl">{product.price * counter} PLN</p>
-
-					{/* <div className=" mt-6">
-						<p className="font-poppins text-sm ml-5">LICZBA SZTUK</p>
-						<div className="flex space-x-2 w-fit">
-							<button className=" aspect-square w-8 m-auto text-lg rounded-full border-[1px] border-gray-300 bg-gray-100 hover:bg-gray-300 transition-all duration-200" onClick={decrease}>
-								<AiOutlineMinus className='text-center mx-auto'/>
-							</button>
-							<div className="py-2 text-2xl min-w-[30px] text-center">{counter}</div>
-							<button className=" aspect-square w-8 m-auto text-lg rounded-full border-[1px] border-gray-300 bg-gray-100 hover:bg-gray-300 transition-all duration-200" onClick={increase}>
-								<AiOutlinePlus className='text-center mx-auto'/>
-							</button>
-						</div>
-					</div> */}
 
 					<div className="mt-6 mb-4">
 						{/* <h1 className=" font-questrial font-bold text-xl ml-3">ROZMIAR</h1> */}
@@ -217,7 +207,7 @@ const Product = () => {
 						</div>
 						
 						<div className='w-fit group ml-5' onClick={scrollToTable}>
-							<p className=' font-poppins mt-4 cursor-pointer w-fit text-sm'>Tabela rozmiarów</p>
+							<p className=' font-poppins mt-4 cursor-pointer w-fit text-sm tableToggler'>Tabela rozmiarów</p>
 							<div className='w-0 h-[1px] bg-black group-hover:w-full transition-all duration-150'></div>
 						</div>
 					</div>
@@ -253,141 +243,128 @@ const Product = () => {
 						</button>
 					</div>
 				</div>
+
+
+
+		<div className='tableWrapper mt-8'>
+			{/* <h1 className=' font-megrim text-3xl my-5 ml-[10%]'>TABELA ROZMIAROW</h1> */}
+			{/* {sizeTable.map((element, i)=>{ */}
+				{/* return( */}
+			<div className='grid grid-cols-4 text-center mx-auto w-[95%]'>
+				
+				<div className='bg-[#030303]'>
+				{sizeTable.map((element, i)=>{
+					return(
+					<>
+						{i==0&&(
+								<p className=' font-megrim text-lg md:text-2xl font-bold bg-[#efefef]'>{element.size}</p>
+						)}
+						{(i!=0 &&i%2==0)&&(
+								<p className='md:text-xl bg-[#efefef]'>{element.size}</p>
+						)}
+						{(i!=0 &&i%2!=0)&&(
+								<p className='md:text-xl bg-[#ffffff]'>{element.size}</p>
+						)}
+					</>
+					)
+				})}
+				</div>
+
+				<div className='bg-[#000]'>
+				{sizeTable.map((element, i)=>{
+					return(
+					<>
+						{i==0&&(
+								<p className=' font-megrim text-lg md:text-2xl font-bold bg-[#efefef]'>{element.width}</p>
+						)}
+						{(i!=0 &&i%2==0)&&(
+								<p className='md:text-xl bg-[#efefef]'>{element.width}</p>
+						)}
+						{(i!=0 &&i%2!=0)&&(
+								<p className='md:text-xl bg-[#ffffff]'>{element.width}</p>
+						)}
+					</>
+					)
+				})}
+				</div>
+
+				<div className='bg-[#030303]'>
+				{sizeTable.map((element, i)=>{
+					return(
+					<>
+						{i==0&&(
+								<p className=' font-megrim text-lg md:text-2xl font-bold bg-[#efefef]'>{element.length}</p>
+						)}
+						{(i!=0 &&i%2==0)&&(
+								<p className='md:text-xl bg-[#efefef]'>{element.length}</p>
+						)}
+						{(i!=0 &&i%2!=0)&&(
+								<p className='md:text-xl bg-[#ffffff]'>{element.length}</p>
+						)}
+					</>
+					)
+				})}
+				</div>
+
+				<div className='bg-[#000]'>
+				{sizeTable.map((element, i)=>{
+					return(
+					<>
+						{i==0&&(
+								<p className=' font-megrim text-lg md:text-2xl font-bold bg-[#efefef]'>{element.arm}</p>
+						)}
+						{(i!=0 &&i%2==0)&&(
+								<p className='md:text-xl bg-[#efefef]'>{element.arm}</p>
+						)}
+						{(i!=0 &&i%2!=0)&&(
+								<p className='md:text-xl bg-[#ffffff]'>{element.arm}</p>
+						)}
+					</>
+					)
+				})}
+				</div>
 			</div>
-		</div>
+		{/* ) */}
+	{/* })} */}
+</div>
 
-
-		<div className="w-full min-h-fit bg-[#000000] mt-[10%] relative pb-9">
-			<div className="md:w-[70%] bg-[#020202] rounded-3xl h-fit relative md:left-[15%] md:top-[-30px] sm:top-[-50px] top-[-30px]">
-
-				<div className="relative w-full">
-				<div className=' w-fit mx-auto rounded-full'>
-					<h1 className=' text-5xl font-megrim text-white text-center py-3'>O PRODUKCIE</h1>
-				</div>
-				</div>
-
-				<div className='tableWrapper mt-8'>
-					<h1 className=' font-megrim text-white text-3xl my-5 ml-[10%]'>TABELA ROZMIAROW</h1>
-					{/* {sizeTable.map((element, i)=>{ */}
-						{/* return( */}
-							<div className='grid grid-cols-4 text-white text-center mx-auto w-[95%]'>
-								
-								<div className='bg-[#030303]'>
-								{sizeTable.map((element, i)=>{
-									return(
-									<>
-										{i==0&&(
-												<p className=' font-megrim text-lg md:text-2xl bg-[#030201]'>{element.size}</p>
-										)}
-										{(i!=0 &&i%2==0)&&(
-												<p className='md:text-xl bg-black'>{element.size}</p>
-										)}
-										{(i!=0 &&i%2!=0)&&(
-												<p className='md:text-xl bg-[#090909]'>{element.size}</p>
-										)}
-									</>
-									)
-								})}
-								</div>
-
-								<div className='bg-[#000]'>
-								{sizeTable.map((element, i)=>{
-									return(
-									<>
-										{i==0&&(
-												<p className=' font-megrim text-lg md:text-2xl bg-[#030201]'>{element.width}</p>
-										)}
-										{(i!=0 &&i%2==0)&&(
-												<p className='md:text-xl bg-black'>{element.width}</p>
-										)}
-										{(i!=0 &&i%2!=0)&&(
-												<p className='md:text-xl bg-[#090909]'>{element.width}</p>
-										)}
-									</>
-									)
-								})}
-								</div>
-
-								<div className='bg-[#030303]'>
-								{sizeTable.map((element, i)=>{
-									return(
-									<>
-										{i==0&&(
-												<p className=' font-megrim text-lg md:text-2xl bg-[#030201]'>{element.length}</p>
-										)}
-										{(i!=0 &&i%2==0)&&(
-												<p className='md:text-xl bg-black'>{element.length}</p>
-										)}
-										{(i!=0 &&i%2!=0)&&(
-												<p className='md:text-xl bg-[#090909]'>{element.length}</p>
-										)}
-									</>
-									)
-								})}
-								</div>
-
-								<div className='bg-[#000]'>
-								{sizeTable.map((element, i)=>{
-									return(
-									<>
-										{i==0&&(
-												<p className=' font-megrim text-lg md:text-2xl bg-[#030201]'>{element.arm}</p>
-										)}
-										{(i!=0 &&i%2==0)&&(
-												<p className='md:text-xl bg-black'>{element.arm}</p>
-										)}
-										{(i!=0 &&i%2!=0)&&(
-												<p className='md:text-xl bg-[#090909]'>{element.arm}</p>
-										)}
-									</>
-									)
-								})}
-								</div>
-							</div>
-						{/* ) */}
-					{/* })} */}
-				</div>
-
-				<div className="grid lg:grid-cols-2 text-white w-[100%] mx-auto gap-5 mt-8 relative lg:top-[20px] ">
-						<div className='w-[95%] mx-auto p-6 bg-[#020202] text-[silver] rounded-3xl z-[5] shadow-lg shadow-gray-950'>
-							<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>SKLAD</h1>
-							<div className="font-questrial">
-									<div>
-									<p className=' mt-4 text-2xl'>MATERIAŁ:</p>
-										{product["composition "].map((element, i)=>{
-											return(
-												<li className='ml-5 text-xl'>{element.compositionElement}</li>
-											)
-										})}
-									</div>
-
-									<div>
-									</div>
-							</div>
-						</div>
-						<div className='w-[95%] mx-auto p-6 bg-[#DAE3E5] text-[#88502b] rounded-3xl relative md:left-[50px] lg:left-0 lg:top-[60px] z-[5] shadow-lg shadow-[#4b3526]'>
-							<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>O PRODUKCIE</h1>
-							<p className='text-justify mt-4 font-questrial text-xl' >{product.description}</p>
-						</div>
-
-						<div className='w-[95%] mx-auto p-6 bg-[#060913] text-[silver] rounded-3xl relative lg:left-[40px] z-[5] shadow-lg shadow-[#0a0908]'>
-							<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>DOSTAWA</h1>
-								<div className=" font-questrial text-xl">
-									<p className='text-justify mt-4'>Dbamy o to, aby Twoja bluza dotarła do Ciebie szybko, bezpiecznie i z pełnym zadowoleniem. Oto szczegóły dotyczące dostawy:</p>
-										{delivery.map((element)=>{
-											return(
-												<li className='ml-6'>{element.deliveryElement}</li>
-											)
-										})}
-								</div>
-						</div>
+<div className="grid text-white w-[100%] mx-auto gap-5 mt-8 relative ">
+		<div className='w-[95%] mx-auto p-6 bg-[#020202] text-[silver] rounded-3xl z-[5] shadow-lg shadow-gray-950'>
+			<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>SKLAD</h1>
+			<div className="font-questrial">
+					<div>
+					<p className=' mt-4 text-2xl'>MATERIAŁ:</p>
+						{product["composition "].map((element, i)=>{
+							return(
+								<li className='ml-5 text-xl'>{element.compositionElement}</li>
+							)
+						})}
 					</div>
 
-					{/* <p className='text-[#090909] font-megrim text-3xl absolute top-0 z-[1] animatedBackgroundText hidden lg:block'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid accusantium recusandae ratione incidunt doloribus quam ex illum unde modi dignissimos fugit qui hic doloremque cumque necessitatibus esse quasi iusto placeat assumenda ab, saepe illo? Sunt adipisci consequatur excepturi voluptatibus magnam. Sit, cumque. Odio, officiis! Quis ullam officiis nam, dolores vero omnis aspernatur? Sit qui dicta eius at soluta, dignissimos eveniet accusamus cumque possimus eum iusto molestias earum delectus unde saepe laboriosam, tempora error officia nulla minima sint obcaecati dolor. Nam sed aliquid culpa tempora incidunt deleniti consectetur, repellat obcaecati. Quod iusto, in, recusandae cum cumque error voluptas nesciunt quam ut consequuntur corrupti libero, a quia aliquid fugit! Iste ab perferendis vero sequi delectus officiis dolor tenetur porro expedita? Quas provident reprehenderit atque! Illum, blanditiis? Eum quia reprehenderit quisquam nulla. Pariatur laborum fugit illo sint similique exercitationem tenetur nesciunt! Enim, unde a facere corrupti sequi perspiciatis dolorem eaque non sed explicabo, aut nam earum nobis nostrum labore dolorum? Dicta, facere temporibus dolorum minus iusto expedita amet molestiae nesciunt eaque quam, doloribus pariatur sit? Praesentium impedit quaerat, in illum corporis repellendus nam sed voluptas consectetur autem deleniti.</p>
-					<p className='text-[#090909] font-megrim text-3xl absolute top-0 z-[1] animatedBackgroundText lg:hidden'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius dignissimos delectus sequi voluptates beatae tempora itaque sunt nemo laudantium aperiam soluta, maxime veritatis obcaecati porro rerum distinctio, consequatur repellendus voluptas labore? Minus debitis tempore corporis quasi, iste in placeat. Facilis nostrum amet, porro omnis odit, totam velit officiis iure quidem beatae aperiam. Nesciunt facilis ratione rerum, obcaecati repudiandae debitis ipsam velit maiores, enim odit praesentium ex modi esse tempora ad nulla nostrum molestias nam? Doloribus beatae totam alias consequuntur molestiae architecto ad quo minima exercitationem vero, dolorum inventore culpa omnis dolore cum harum asperiores iste! Velit fugit quod ullam in?</p> */}
+					<div>
+					</div>
 			</div>
 		</div>
+		<div className='w-[95%] mx-auto p-6 bg-[#DAE3E5] text-[#88502b] rounded-3xl relative z-[5] shadow-lg shadow-[#4b3526]'>
+			<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>O PRODUKCIE</h1>
+			<p className='text-justify mt-4 font-questrial text-xl' >{product.description}</p>
+		</div>
+
+		<div className='w-[95%] mx-auto p-6 bg-[#060913] text-[silver] rounded-3xl relative z-[5] shadow-lg shadow-[#0a0908]'>
+			<h1 className=' text-3xl font-megrim ml-[10%] font-bold'>DOSTAWA</h1>
+				<div className=" font-questrial text-xl">
+					<p className='text-justify mt-4'>Dbamy o to, aby Twoja bluza dotarła do Ciebie szybko, bezpiecznie i z pełnym zadowoleniem. Oto szczegóły dotyczące dostawy:</p>
+						{delivery.map((element)=>{
+							return(
+								<li className='ml-6'>{element.deliveryElement}</li>
+							)
+						})}
+				</div>
+		</div>
+	</div>
+</div>
 			</div>
+		</div>
 			)}
 		</div>
 	);

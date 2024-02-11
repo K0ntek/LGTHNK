@@ -22,10 +22,10 @@ const Navbar = () => {
       link: '/men',
       title: 'Mężczyzna',
     },
-    {
-      link: '/collections',
-      title: 'Kolecje',
-    },
+    // {
+    //   link: '/collections',
+    //   title: 'Kolecje',
+    // },
     {
       link: '/about',
       title: 'O nas',
