@@ -8,35 +8,35 @@ export const categoriesBackgrounds = [
     "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "KOLEKCJA EGIPSKA",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-    // products: <CategoryProducts/>
+    link: "egypt"
   },
   {
     id: 2,
     "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "KOLEKCJA RZYMSKA",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-    // products: <CategoryProducts/>
+    link: "rome"
   },
   {
     id: 3,
     "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "KOLEKCJA NORDYCKA",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-    // products: <CategoryProducts/>
+    link: "nordic"
   },
   {
     id: 4,
     "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "KOLEKCJA NIEMIECKA",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-    // products: <CategoryProducts/>
+    link: "german"
   },
   {
     id: 5,
     "background": "https://images.unsplash.com/photo-1508872528308-297e1dc77d6c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "KOLEKCJA AZJATYCKA",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quasi nemo sed, officiis est mollitia.",
-    // products: <CategoryProducts/>
+    link: "asian"
   }
 ]
 
@@ -87,7 +87,7 @@ const Men=()=>{
       }
     ]
     return(
-       <div className="min-h-screen bg-[#111] py-8">
+       <div className="min-h-screen bg-[#000] py-8">
           <div className="menBanner relative h-screen bg-center">
             <div className=" mx-auto relative top-[30%] space-y-[10%]">
                   <div className=" space-y-10">
@@ -114,7 +114,7 @@ const Men=()=>{
             {categoriesBackgrounds.map((bgElement, i)=>{
               return(
                <div>
-                  <div id={bgElement.id} className="h-screen rounded-3xl" style={{background: `url(${bgElement.background})`, backgroundAttachment: "fixed", backgroundPosition:"center"}}>
+                  <div id={bgElement.link} className="h-screen rounded-3xl" style={{background: `url(${bgElement.background})`, backgroundAttachment: "fixed", backgroundPosition:"center"}}>
 
                     <div className="w-full h-full bg-gradient-to-t from-black/80 to-transparent mx-auto text-center">
                         <div className="relative top-[40%]">
@@ -123,7 +123,13 @@ const Men=()=>{
                         </div>
                     </div>
                   </div>
+                   {/* <div className=" md:row-span-2 md:col-span-2 m-0 p-0 overflow-hidden rounded-[40px]">
+                        <img src={bgElement.startImage} alt="dasasd" className="rounded-[40px]"/>
+                    </div> */}
                   <CategoryProducts/>
+                    {/* <div className=" row-span-1 col-span-1 m-0 p-0 overflow-hidden rounded-[40px]">
+                      <img src={bgElement.endImage} alt="dasasd" className="rounded-[40px]"/>
+                    </div> */}
                 </div>
               )
             })}
