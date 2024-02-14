@@ -126,7 +126,7 @@ const Men=()=>{
                    {/* <div className=" md:row-span-2 md:col-span-2 m-0 p-0 overflow-hidden rounded-[40px]">
                         <img src={bgElement.startImage} alt="dasasd" className="rounded-[40px]"/>
                     </div> */}
-                  <CategoryProducts/>
+                  <CategoryProducts id={i}/>
                     {/* <div className=" row-span-1 col-span-1 m-0 p-0 overflow-hidden rounded-[40px]">
                       <img src={bgElement.endImage} alt="dasasd" className="rounded-[40px]"/>
                     </div> */}

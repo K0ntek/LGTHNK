@@ -32,7 +32,7 @@ export const categoryImages=[
 }
 ]
 
-const CategoryProducts =()=>{
+const CategoryProducts =({id})=>{
 
     const responsive = {
         superLargeDesktop: {
@@ -57,9 +57,8 @@ const CategoryProducts =()=>{
       const startImage=[]
       const endImage=[]
 
-        categoriesBackgrounds.forEach((category, i) => {
           categoryImages.forEach((image, i) => {
-            if(category.id == image.id){
+            if(id+1 == image.id){
               startImage.push(
                     <img src={image.startImage} alt="dasasd" className="rounded-[40px]"/>
               )
@@ -68,7 +67,6 @@ const CategoryProducts =()=>{
               )
             }
           });
-        });
 
     return(
        <div className="lg:min-h-screen bg-[#000] py-10 lg:py-8">
@@ -118,7 +116,7 @@ const CategoryProducts =()=>{
             })}
 
                 <div className=" row-span-1 col-span-1 m-0 p-0 overflow-hidden rounded-[40px]">
-                    <img src={endImage} alt="dasasd" className="rounded-[40px]"/>
+                    {endImage}
                 </div>
         </div>
 
