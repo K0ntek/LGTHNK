@@ -214,7 +214,7 @@ const Header = () => {
           <div className='gendersWrapper h-fit md:h-screen bg-black text-center py-10 md:py-0'>
             <div className='gender relative md:top-[50%] md:translate-y-[-70%] space-y-10 md:space-y-8'>
               {/* <p className="w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur, enim eaque labore sed doloremque architecto eius debitis consequuntur sapiente quisquam ut reprehenderit, quo consequatur ipsa iusto. Ducimus, sit labore.</p> */}
-              <h1 className=' font-inter font-[200] text-7xl lg:text-8xl text-[silver]'>
+              <h1 className=' font-inter font-[200] text-5xl lg:text-8xl text-[silver]'>
                 MĘŻCZYZNA
               </h1>
               <div className='w-fit mx-auto'>
@@ -237,7 +237,7 @@ const Header = () => {
           </div>
           <div className='gendersWrapper h-fit md:h-screen bg-[#e0e0e0] text-center py-10 md:py-0'>
             <div className='gender relative md:top-[50%] md:translate-y-[-30%] space-y-10 md:space-y-8'>
-              <h1 className=' font-inter font-[200] text-7xl lg:text-8xl text-[#74523f]'>
+              <h1 className=' font-inter font-[200] text-5xl lg:text-8xl text-[#74523f]'>
                 KOBIETA
               </h1>
               <div className='w-fit mx-auto'>
