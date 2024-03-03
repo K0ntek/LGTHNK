@@ -15,7 +15,8 @@ export default {
       'tektur' : ['Tektur'],
       'unbounded' : ['Unbounded'],
       'sen' : ['Sen'],
-      'poppins' : ['Poppins']
+      'poppins' : ['Poppins'],
+      'inter' : ['Inter']
 
     }
   },

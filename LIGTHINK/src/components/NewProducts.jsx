@@ -25,7 +25,9 @@ const NewProducts =()=>{
         }
       };
     return(
-        <div className=" w-[90%] mx-auto grid lg:grid-cols-5 gap-[10px] mt-10">
+        <>
+       <div className="hidden xl:block">
+         <div className=" w-[90%] mx-auto grid lg:grid-cols-5 gap-[10px] mt-10">
                 {data.map((element)=>{
                     return(
                         <Link to={`/product/${element.id}`} id={element.id}>
@@ -39,8 +41,10 @@ const NewProducts =()=>{
                                 </Link>
                     )
                 })}
+        </div>
+       </div>
 
-                <Carousel 
+        <Carousel 
                     responsive={responsive}
                     // showDots={true}
                     swipeable={true}
@@ -48,7 +52,7 @@ const NewProducts =()=>{
                     infinite={true}
                     autoPlay={true}
                     autoPlaySpeed={4000}
-                    className="lg:hidden">
+                    className="xl:hidden">
                         {data.map((element)=>{
                     return(
                         <Link to={`/product/${element.id}`}>
@@ -67,7 +71,7 @@ const NewProducts =()=>{
                     )
                 })}
                     </Carousel>;
-        </div>
+        </>
     )
 }
 

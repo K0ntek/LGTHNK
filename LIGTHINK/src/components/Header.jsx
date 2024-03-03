@@ -56,7 +56,7 @@ const Header = () => {
     }
     gsap.fromTo('.markPassword', { x: '-300', opacity: 0 } , {x: 0, opacity: 1, duration: 0.5, scrollTrigger: {
             trigger: '.markPasswordWrapper',
-            start: 'top 90%',
+            start: 'top 80%',
             end: 'top 60%',
             scrub: 1,
            },
@@ -64,7 +64,7 @@ const Header = () => {
     );
     gsap.fromTo('.markPasswordContent', { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, delay: 0.5, scrollTrigger: {
           trigger: '.markPassword',
-          start: 'top 60%',
+          start: 'top 80%',
           end: 'top 50%',
           scrub: 1,
         },
@@ -214,8 +214,8 @@ const Header = () => {
           <div className='gendersWrapper h-fit md:h-screen bg-black text-center py-10 md:py-0'>
             <div className='gender relative md:top-[50%] md:translate-y-[-70%] space-y-10 md:space-y-8'>
               {/* <p className="w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur, enim eaque labore sed doloremque architecto eius debitis consequuntur sapiente quisquam ut reprehenderit, quo consequatur ipsa iusto. Ducimus, sit labore.</p> */}
-              <h1 className=' font-megrim text-7xl lg:text-8xl text-[silver]'>
-                MEZCZYZNA
+              <h1 className=' font-inter font-[200] text-7xl lg:text-8xl text-[silver]'>
+                MĘŻCZYZNA
               </h1>
               <div className='w-fit mx-auto'>
                 <div className='menButtonBorder w-[40%] h-[2px] bg-[#74523f] mx-auto'></div>
@@ -237,7 +237,7 @@ const Header = () => {
           </div>
           <div className='gendersWrapper h-fit md:h-screen bg-[#e0e0e0] text-center py-10 md:py-0'>
             <div className='gender relative md:top-[50%] md:translate-y-[-30%] space-y-10 md:space-y-8'>
-              <h1 className=' font-megrim text-7xl lg:text-8xl text-[#74523f]'>
+              <h1 className=' font-inter font-[200] text-7xl lg:text-8xl text-[#74523f]'>
                 KOBIETA
               </h1>
               <div className='w-fit mx-auto'>
@@ -262,8 +262,8 @@ const Header = () => {
       </div>
 
       <div className=' h-fit bg-black markPasswordWrapper'>
-        <div className='markPassword w-[90%] lg:w-3/4 rounded-3xl bg-gradient-to-t from-black to-[rgb(0,5,0)] shadow-[0px_0px_40px_0px] shadow-black mx-auto p-4 relative top-[-30px] lg:top-[-100px]'>
-          <h1 className=' mx-auto text-justify text-transparent text-2xl lg:text-5xl font-megrim font-extrabold tracking-[6px] lg:tracking-[10px] leading-9 lg:leading-[60px] opacity-0'>
+        <div className='markPassword w-[90%] lg:w-[65%] rounded-3xl bg-gradient-to-t from-black to-[rgb(0,5,0)] shadow-[0px_0px_40px_0px] shadow-black mx-auto p-4 relative top-[-30px] lg:top-[-60px]'>
+          <h1 className=' mx-auto text-justify text-transparent text-2xl lg:text-4xl font-megrim font-extrabold tracking-[6px] lg:tracking-[10px] leading-9 lg:leading-[40px] opacity-0'>
             "Odkryj magiczną siłę stylu z LGTHNK - ubrania inspirowane
             mitologią, które wzbogacą Twoją garderobę o niezwykłą opowieść.
             Każdy kawałek naszej kolekcji to mistyczna podróż przez legendy i
@@ -283,7 +283,7 @@ const Header = () => {
             ]}
             speed={70}
             repeat={Infinity}
-            className=' mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto text-clip lg:text-justify text-clip text-[#7a4527] text-2xl lg:text-5xl font-sen tracking-[6px] leading-9 lg:leading-[50px]'
+            className=' mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto lg:text-justify text-clip text-[#7a4527] text-2xl lg:text-4xl font-sen tracking-[6px] leading-9 lg:leading-[40px]'
           />
         </div>
       </div>
@@ -322,7 +322,7 @@ const Header = () => {
         {/* <div className="w-1/2 mx-auto h-1 rounded-full bg-[#492914]"></div> */}
       </div>
 
-      <div className='min-h-screen bg-white grid md:grid-cols-2 text-black '>
+      <div className='lg:min-h-screen bg-white grid md:grid-cols-2 text-black '>
         <div className=' mx-auto w-full'>
           <div className='sticky top-[50%] space-y-7 py-7'>
             {/* <div className="absolute h-[100%] w-1 bg-[#492914] right-0"></div> */}
@@ -343,7 +343,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <div className=''>
+        <div className='h-fit md:h-full'>
           {/* <img
             src='https://images.unsplash.com/photo-1512551980832-13df02babc9e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
             className='h-full'

@@ -154,7 +154,7 @@ const Navbar = () => {
             onClick={hideBag}
           />
           <h1 className=' font-questrial text-2xl mt-3 text-center'>KOSZYK</h1>
-          <div className='mt-[50px] px-3'>
+          <div className='mt-[50px] px-3 h-3/4 overflow-y-scroll'>
             <div>
               <ProductsInBag />
             </div>

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Megrim&family=Michroma&family=Sen&family=Tektur&family=Unbounded&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -34,8 +35,8 @@ body {
 
 .formWrapper input:valid~span,
 .formWrapper input:focus~span {
-  transform: translateY(-30px);
-  color: #916245;
+  transform: translateY(-22px);
+  color: #0e0e0e;
   letter-spacing: 1px;
 }
 
@@ -148,8 +149,8 @@ body {
 
 textarea::placeholder {
   color: black;
-  font-family: "megrim";
-  font-weight: 900;
+  font-family: "inter";
+  font-size: 14px;
 }
 
 .color{
