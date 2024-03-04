@@ -120,7 +120,7 @@ const Header = () => {
   return (
     <div className='bg-[#020202]'>
       <div className=' header w-full min-h-screen relative mb-[10%]'>
-        <div className=' absolute right-2 top-[50%] translate-y-[-50%] h-fit hidden md:block z-[98]'>
+        <div className=' absolute right-2 top-[35%] md:top-[50%] translate-y-[-50%] h-fit  z-[98]'>
           <div className='socials z-[99] space-y-3'>
             <FiInstagram className='text-xl text-white hover:text-[silver] transition-all duration-200' />
             <FaFacebook className='text-xl text-white hover:text-[silver] transition-all duration-200' />
@@ -171,9 +171,9 @@ const Header = () => {
       </div>
           <div className='relative z-[98] overflow-x-hidden'>
             <div className='w-full bg-black'>
-            <p className='flex w-[90%] text-white text-2xl my-0 mx-auto font-megrim font-bold py-5'>
-              <span className='announcement whitespace-nowrap absolute top-1 w-[1200px]'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span>
-              <span className='announcement whitespace-nowrap absolute top-1 w-[1200px]'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.01.2024 r.</span> do <span className="text-red-600">15.02.2024 r.</span> NIE ZWLEKAJ !</span></p>
+            <p className='flex w-[90%] text-white text-2xl my-0 mx-auto font-megrim font-[200] py-5'>
+              <span className='announcement whitespace-nowrap absolute top-1 w-[1200px]'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.03.2024 r.</span> do <span className="text-red-600">15.04.2024 r.</span> NIE ZWLEKAJ !</span>
+              <span className='announcement whitespace-nowrap absolute top-1 w-[1200px]'>Wybrana kolekcja obowiazuje od <span className="text-red-600">11.03.2024 r.</span> do <span className="text-red-600">15.04.2024 r.</span> NIE ZWLEKAJ !</span></p>
             </div>
           </div>
       <div className='newCollection aspect-square sm:aspect-video w-full bg-white relative overflow-x-hidden'>
@@ -214,7 +214,7 @@ const Header = () => {
           <div className='gendersWrapper h-fit md:h-screen bg-black text-center py-10 md:py-0'>
             <div className='gender relative md:top-[50%] md:translate-y-[-70%] space-y-10 md:space-y-8'>
               {/* <p className="w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur, enim eaque labore sed doloremque architecto eius debitis consequuntur sapiente quisquam ut reprehenderit, quo consequatur ipsa iusto. Ducimus, sit labore.</p> */}
-              <h1 className=' font-inter font-[200] text-5xl lg:text-8xl text-[silver]'>
+              <h1 className=' font-inter font-[200] text-5xl lg:text-7xl text-[silver]'>
                 MĘŻCZYZNA
               </h1>
               <div className='w-fit mx-auto'>
@@ -237,7 +237,7 @@ const Header = () => {
           </div>
           <div className='gendersWrapper h-fit md:h-screen bg-[#e0e0e0] text-center py-10 md:py-0'>
             <div className='gender relative md:top-[50%] md:translate-y-[-30%] space-y-10 md:space-y-8'>
-              <h1 className=' font-inter font-[200] text-5xl lg:text-8xl text-[#74523f]'>
+              <h1 className=' font-inter font-[200] text-5xl lg:text-7xl text-[#74523f]'>
                 KOBIETA
               </h1>
               <div className='w-fit mx-auto'>
@@ -290,7 +290,7 @@ const Header = () => {
 
       <div className='desc w-full bg-white  space-y-[-40px]'>
         <div className=' overflow-hidden'>
-          <h1 className=' descTitle text-[70px] md:text-[100px] lg:text-[150px] font-megrim font-extrabold relative left-[15%]'>
+          <h1 className=' descTitle text-[70px] md:text-[100px] lg:text-[150px] font-inter font-[200] relative left-[15%]'>
             WYGODA
           </h1>
         </div>
@@ -301,7 +301,7 @@ const Header = () => {
           </h1>
         </div>
         <div className=' overflow-hidden'>
-          <h1 className=' descTitle text-[70px] md:text-[100px] lg:text-[150px] font-megrim font-extrabold relative left-[20%] sm:left-[35%]'>
+          <h1 className=' descTitle text-[70px] md:text-[100px] lg:text-[150px] font-inter font-[100] relative left-[20%] sm:left-[35%]'>
             WYGLAD
           </h1>
         </div>
@@ -310,8 +310,7 @@ const Header = () => {
         <h1 className='font-megrim text-[#acacac] text-5xl lg:text-7xl xl:text-8xl  ml-[10%] productsTitle'>
           NAJNOWSZE
         </h1>
-        <h1 className='font-megrim text-white text-5xl lg:text-7xl xl:text-8xl  ml-[30%] productsTitle'>
-          {' '}
+        <h1 className='font-inter font-[100] text-white text-5xl lg:text-7xl xl:text-8xl  ml-[30%] productsTitle'>
           PRODUKTY
         </h1>
         {/* <h1 className="font-megrim text-[#555555] text-3xl sm:text-5xl lg:text-7xl xl:text-8xl  ml-[5%] productsTitle">NAJNOWSZE PRODUKTY</h1> */}
@@ -326,7 +325,7 @@ const Header = () => {
         <div className=' mx-auto w-full'>
           <div className='sticky top-[50%] space-y-7 py-7'>
             {/* <div className="absolute h-[100%] w-1 bg-[#492914] right-0"></div> */}
-            <h1 className='text-center text-7xl lg:text-9xl font-megrim text-gray-900'>
+            <h1 className='text-center text-7xl lg:text-9xl font-inter font-[100] text-gray-900'>
               CUSTOM
             </h1>
             <p className='w-1/2 text-justify mx-auto font-questrial text-xl'>

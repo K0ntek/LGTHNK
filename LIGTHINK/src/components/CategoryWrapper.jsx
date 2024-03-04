@@ -42,6 +42,7 @@ const CategoryWrapper =({header, content, categoriesBackgrounds, backgroundImage
 
   useEffect(()=>{
     gsap.fromTo('.header', {y:200, opacity:0}, {y:0, opacity:1, duration:.5})
+    gsap.fromTo('.buttons', {opacity:0, y:100}, {opacity:1, y:0, duration:.5})
   },[])
 
     useEffect(()=>{
@@ -66,7 +67,7 @@ const CategoryWrapper =({header, content, categoriesBackgrounds, backgroundImage
         <div className=" mx-auto relative top-[30%] space-y-[10%]">
           <div className=" space-y-10">
             <h1 className="header font-inter text-[#d4d4d4] text-5xl sm:text-7xl tracking-[5px] productsTitle text-center">{header}</h1>
-            <div className="w-3/4 md:w-1/3 mx-auto text-justify mt-5">
+            <div className=" w-1/3 mx-auto text-justify mt-5 h-[100px]">
             <TypeAnimation
               sequence={[' ', 200, `${content}`]}
               speed={80}
@@ -79,7 +80,7 @@ const CategoryWrapper =({header, content, categoriesBackgrounds, backgroundImage
           <div className=" justify-center mx-auto text-center space-y-8">
             {/* <h1 className=" text-white text-3xl font-michroma">KOLEKCJE</h1> */}
 
-            <div className=" flex gap-3 justify-center flex-wrap">
+            <div className=" flex gap-3 justify-center flex-wrap buttons w-4/5 mx-auto">
               {buttons.map((button, i) => <CategoryButtons button={button} />)}
             </div>
           </div>

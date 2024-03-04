@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import data from '../data.json'
 import {AiOutlineMinus, AiOutlinePlus} from 'react-icons/ai'
+import { IoMdClose } from 'react-icons/io';
 import { formatCurrency } from "../utilities/formatCurrency"
 
 
@@ -34,8 +35,10 @@ const ProductsInBag = () => {
 
             {data.map((product)=>{
                 return(
-                    <div key={product.id} className=' my-7 flex space-x-4'>
-                        <img src={product.image} alt={product.title} className='w-[60px] aspect-square rounded-full'/>
+                    <div className="w-full">
+                        <div key={product.id} className=' my-7 flex space-x-4 relative'>
+                        <IoMdClose className="absolute right-2 top-[50%] translate-y-[-50%] hover:text-red-600" />
+                        <img src={product.image} alt={product.title} className='w-[60px] h-[60px] aspect-[1/1] rounded-full'/>
                         <div>
                             <div  className=' relative top-[50%] translate-y-[-50%]'>
                                 <div className="flex space-x-4">
@@ -57,6 +60,9 @@ const ProductsInBag = () => {
                                     </div> */}
                             </div>
                         </div>
+                        </div>
+
+                        <div className="w-2/5 h-[1px] bg-[#ceb423] rounded-full mx-auto"></div>
                     </div>
                 )
             })}

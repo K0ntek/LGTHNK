@@ -154,11 +154,13 @@ const Navbar = () => {
             onClick={hideBag}
           />
           <h1 className=' font-questrial text-2xl mt-3 text-center'>KOSZYK</h1>
-          <div className='mt-[50px] px-3 h-3/4 overflow-y-scroll'>
+          <div className='mt-[50px] px-3 h-[70%] overflow-y-scroll'>
             <div>
               <ProductsInBag />
             </div>
           </div>
+
+          <h1 className="mt-4 text-center text-lg font-inter">WARTOŚĆ KOSZYKA : 1000 PLN</h1>
           <div className='w-full mx-auto justify-center absolute bottom-[5%] left-[10%]'>
             <Link to={'/summary'}>
               <button className='w-[80%] py-4 bg-black text-white text-lg hover:rounded-2xl hover:bg-[#070707] transition-all duration-150'>

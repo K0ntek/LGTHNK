@@ -36,8 +36,9 @@ body {
 .formWrapper input:valid~span,
 .formWrapper input:focus~span {
   transform: translateY(-22px);
-  color: #0e0e0e;
+  color: rgb(218, 185, 1);
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 ::-webkit-scrollbar {
