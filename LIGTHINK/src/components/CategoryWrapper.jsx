@@ -67,7 +67,7 @@ const CategoryWrapper =({header, content, categoriesBackgrounds, backgroundImage
         <div className=" mx-auto relative top-[30%] space-y-[10%]">
           <div className=" space-y-10">
             <h1 className="header font-inter text-[#d4d4d4] text-5xl sm:text-7xl tracking-[5px] productsTitle text-center">{header}</h1>
-            <div className=" md:w-1/3 mx-auto text-justify mt-5 h-[100px]">
+            <div className=" w-4/5 md:w-1/3 mx-auto text-justify mt-5 h-[100px]">
             <TypeAnimation
               sequence={[' ', 200, `${content}`]}
               speed={80}
