@@ -71,7 +71,7 @@ const CategoryProducts =({id})=>{
         let images = document.querySelectorAll(['.startImage', '.endImage'])
         images.forEach(image => {
             // gsap.set(image, {opacity:0, scrollTrigger:{trigger:'.products', start:'top 30%', toggleActions:'restart'}})
-            gsap.fromTo(image, {x:400, opacity:0}, {x:0, opacity:1, duration:.5, stagger:.4, delay:.2, scrollTrigger:{trigger:'.products', start:'top 30%'}})
+            gsap.fromTo(image, {x:'-400px', opacity:0}, {x:0, opacity:1, duration:.5, stagger:.4, delay:.2, scrollTrigger:{trigger:'.products', start:'top 30%'}})
         });
     },[])
 
