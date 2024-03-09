@@ -45,17 +45,18 @@ const CategoryWrapper =({header, content, categoriesBackgrounds, backgroundImage
     gsap.fromTo('.buttons', {opacity:0, y:100}, {opacity:1, y:0, duration:.5})
   },[])
 
-    useEffect(()=>{
-      let collectionButton = document.querySelector('.button');
-    let collectionButtonHover = gsap.to('.buttonBorder', {
-      width: '100%',
-      paused: true,
-      duration: 0.2,
-    });
-
-    collectionButton.addEventListener('mouseenter', () => collectionButtonHover.play());
-    collectionButton.addEventListener('mouseleave', () => collectionButtonHover.reverse());
-    },[])
+    // useEffect(()=>{
+    //   let button = document.querySelector('.button');
+    //   let buttonHover = ()=>{
+    //     gsap.to('.buttonBorder', {
+    //     width: '80%',
+    //     paused: true,
+    //     duration: 0.2,}
+    //   )};
+  
+    //   button.addEventListener('mouseenter', () => buttonHover.play());
+    //   button.addEventListener('mouseleave', () => buttonHover.reverse());
+    // },[])
 
     // const scrollToCategory=()=>{
     //   gsap.to('.category', {scrollTo})
@@ -89,7 +90,7 @@ const CategoryWrapper =({header, content, categoriesBackgrounds, backgroundImage
 
 
       <div>
-        {categoriesBackgrounds.map((bgElement, i) => {
+        {categoriesBackgrounds.map((bgElement, id) => {
           return (
             <div>
               <div id={bgElement.link} className=" category h-screen rounded-3xl" style={{ background: `url(${bgElement.background})`, backgroundAttachment: "fixed", backgroundPosition: "center" }}>
@@ -98,22 +99,22 @@ const CategoryWrapper =({header, content, categoriesBackgrounds, backgroundImage
                     <div className="relative top-[40%] space-y-6 w-fit mx-auto bg-black/40 py-7">
                       <h1 className=" text-[#ccc] font-inter text-6xl font-[200]">{bgElement.name}</h1>
                       <p className="w-[70%] mx-auto text-white text-lg font-poppins">{bgElement.content}</p>
-                      <div className='w-fit mx-auto'>
-                        <div className='buttonBorder w-[40%] h-[2px] bg-yellow-500 mx-auto'></div>
-                        {/* <Link to={i} smooth={true}> */}
-                          <button onClick={scroll(0, 100)} className='button font-sen text-[#fff] bg-black/30 hover:bg-black/50 px-4 md:px-6 py-2 md:py-4 md:text-2xl hover:tracking-[2px] transition-all duration-200'>
-                            SPRAWDŹ
-                          </button>
-                        {/* </Link> */}
-                        <div className='buttonBorder w-[40%] h-[2px] bg-[silver] mx-auto'></div>
-                      </div>
+                      <div className='w-fit mx-auto group'>
+                <div className='buttonBorder w-[40%] h-[2px] bg-yellow-500 mx-auto group-hover:w-4/5 transition-all duration-200'></div>
+                <Link to={`.${id}`}>
+                  <button className='button font-inter text-[#fff] px-4 md:px-8 py-2 md:py-4 md:text-2xl hover:bg-black/50 rounded-lg hover:tracking-[2px] transition-all duration-200'>
+                    KUP TERAZ
+                  </button>
+                </Link>
+                <div className='buttonBorder w-[40%] h-[2px] bg-[silver] mx-auto group-hover:w-4/5 transition-all duration-200'></div>
+              </div>
                     </div>
                 </div>
               </div>
               {/* <div className=" md:row-span-2 md:col-span-2 m-0 p-0 overflow-hidden rounded-[40px]">
                         <img src={bgElement.startImage} alt="dasasd" className="rounded-[40px]"/>
                     </div> */}
-              <CategoryProducts id={i}/>
+              <CategoryProducts id={id} className={id}/>
               {/* <div className=" row-span-1 col-span-1 m-0 p-0 overflow-hidden rounded-[40px]">
                       <img src={bgElement.endImage} alt="dasasd" className="rounded-[40px]"/>
                     </div> */}

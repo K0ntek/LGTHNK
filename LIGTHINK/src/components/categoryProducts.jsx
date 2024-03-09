@@ -64,8 +64,8 @@ const CategoryProducts =({id})=>{
         gsap.registerPlugin(ScrollTrigger)
         let products = document.querySelectorAll('.product')
         products.forEach(product => {
-            // gsap.set(product, {opacity:0, scrollTrigger:{trigger:'.products', start:'top 30%', toggleActions:'restart'}})
-            gsap.fromTo(product, {y:200, opacity:0}, {y:0, opacity:1, duration:.5, stagger:.2, delay:.5, scrollTrigger:{trigger:'.products', start:'top 30%'}}) 
+            gsap.set(product, {opacity:0, scrollTrigger:{trigger:'.products', start:'top 30%'}})
+            gsap.fromTo(product, {y:200, opacity:0}, {y:0, opacity:1, duration:.5, delay:.5, scrollTrigger:{trigger:'.products', start:'top 30%'}}) 
         });
 
         let images = document.querySelectorAll(['.startImage', '.endImage'])
@@ -88,6 +88,8 @@ const CategoryProducts =({id})=>{
               )
             }
           });
+
+          console.log(id)
 
     return(
        <div className="products lg:min-h-screen bg-[#000] py-10 lg:py-8">
