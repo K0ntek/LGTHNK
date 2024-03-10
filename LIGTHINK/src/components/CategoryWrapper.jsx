@@ -103,7 +103,7 @@ const CategoryWrapper =({header, content, categoriesBackgrounds, backgroundImage
                       <div className='w-fit mx-auto group categoryHeader'>
                 <div className='buttonBorder w-[40%] h-[2px] bg-yellow-500 mx-auto group-hover:w-4/5 transition-all duration-200'></div>
                 {/* <Link to={i}> */}
-                  <button onClick={scrollToCategory} className='button font-inter text-[#fff] px-4 md:px-8 py-2 md:py-4 md:text-2xl hover:bg-black/50 rounded-lg hover:tracking-[2px] transition-all duration-200'>
+                  <button className='button font-inter text-[#fff] px-4 md:px-8 py-2 md:py-4 md:text-2xl hover:bg-black/50 rounded-lg hover:tracking-[2px] transition-all duration-200'>
                     KUP TERAZ
                   </button>
                 {/* </Link> */}
