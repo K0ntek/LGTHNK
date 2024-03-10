@@ -62,16 +62,16 @@ const CategoryProducts =({id})=>{
 
       useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
-        let products = document.querySelectorAll('.product')
+        let products = document.querySelectorAll('.productElement')
         products.forEach(product => {
-            gsap.set(product, {opacity:0, scrollTrigger:{trigger:'.products', start:'top 30%'}})
-            gsap.fromTo(product, {y:200, opacity:0}, {y:0, opacity:1, duration:.5, delay:.5, scrollTrigger:{trigger:'.products', start:'top 30%'}}) 
+            // gsap.set(product, {opacity:0, scrollTrigger:{trigger:product, start:'top 150%'}})
+            gsap.fromTo(product, {y:200, opacity:0}, {y:0, opacity:1, duration:.4, delay:.5, scrollTrigger:{trigger:product, start:'top 80%'}}) 
         });
 
         let images = document.querySelectorAll(['.startImage', '.endImage'])
         images.forEach(image => {
-            // gsap.set(image, {opacity:0, scrollTrigger:{trigger:'.products', start:'top 30%', toggleActions:'restart'}})
-            gsap.fromTo(image, {x:'-400px', opacity:0}, {x:0, opacity:1, duration:.5, stagger:.4, delay:.2, scrollTrigger:{trigger:'.products', start:'top 30%'}})
+            // gsap.set(image, {opacity:0, scrollTrigger:{trigger:image, start:'top 150%', toggleActions:'restart'}})
+            gsap.fromTo(image, {x:'-400px', opacity:0}, {x:0, opacity:1, duration:.5, stagger:.4, delay:.2, scrollTrigger:{trigger:image, start:'top 80%'}})
         });
     },[])
 
@@ -81,10 +81,10 @@ const CategoryProducts =({id})=>{
           categoryImages.forEach((image, i) => {
             if(id+1 == image.id){
               startImage.push(
-                    <img src={image.startImage} alt="dasasd" className="rounded-[40px]"/>
+                    <img src={image.startImage} alt="dasasd" className="rounded-[40px] hover:scale-125 transition-all duration-150"/>
               )
               endImage.push(
-                    <img src={image.endImage} alt="dasasd" className="rounded-[40px] object-cover h-full w-full"/>
+                    <img src={image.endImage} alt="dasasd" className="rounded-[40px] object-cover h-full w-full hover:scale-125 transition-all duration-150"/>
               )
             }
           });
@@ -104,10 +104,10 @@ const CategoryProducts =({id})=>{
             {data.map((element, i)=>{
                 return(
                     <>
-                            <div className="h-full product">
+                            <div className="h-full productElement group">
                                 <Link to={`/product/${element.id}`} id={element.id}>
                                     <div key={element.id} id={element.id} className=" rounded-[35px] my-[1%] bg-[#090909] pb-8 hover:bg-[#0a0a0a] text-center transition-all duration-100 overflow-hidden">
-                                    <img src={element.image} alt="product" className="w-full"/>
+                                    <div className=" overflow-hidden"> <img src={element.image} alt="product" className="w-full group-hover:scale-125 transition-all duration-150"/></div>
                                     <div className=" text-white w-[90%] mx-auto mt-4 overflow-x-hidden">
                                         <h1 className=" font-poppins text-xl whitespace-nowrap">{element.title}</h1>
                                         <p className=" font-poppins text-lg">{element.price} PLN</p>

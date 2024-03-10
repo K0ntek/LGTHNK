@@ -84,28 +84,6 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    let womenButton = document.querySelector('.womenButton');
-    let womenButtonHover = gsap.to('.womenButtonBorder', {
-      width: '80%',
-      paused: true,
-      duration: 0.2,
-    });
-
-    womenButton.addEventListener('mouseenter', () => womenButtonHover.play());
-    womenButton.addEventListener('mouseleave', () =>
-      womenButtonHover.reverse()
-    );
-
-    let menButton = document.querySelector('.menButton');
-    let menButtonHover = gsap.to('.menButtonBorder', {
-      width: '80%',
-      paused: true,
-      duration: 0.2,
-    });
-
-    menButton.addEventListener('mouseenter', () => menButtonHover.play());
-    menButton.addEventListener('mouseleave', () => menButtonHover.reverse());
-
     let collectionButton = document.querySelector('.button');
     let collectionButtonHover = gsap.to('.buttonBorder', {
       width: '80%',
@@ -211,20 +189,20 @@ const Header = () => {
         </div>
 
         <div className=' md:min-h-screen grid md:grid-cols-2 rounded-3xl relative space-y-0'>
-          <div className='gendersWrapper h-fit md:h-screen bg-black text-center py-10 md:py-0'>
+          <div className='gendersWrapper h-fit md:h-screen bg-[#040404] text-center py-10 md:py-0'>
             <div className='gender relative md:top-[50%] md:translate-y-[-70%] space-y-10 md:space-y-8'>
               {/* <p className="w-[70%] mx-auto text-justify text-[#e0e0e0] font-gruppo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur tenetur, enim eaque labore sed doloremque architecto eius debitis consequuntur sapiente quisquam ut reprehenderit, quo consequatur ipsa iusto. Ducimus, sit labore.</p> */}
-              <h1 className=' font-inter font-[200] text-5xl lg:text-7xl text-[silver]'>
+              <h1 className=' font-inter font-[200] text-5xl lg:text-7xl text-[#5e5e5e]'>
                 MĘŻCZYZNA
               </h1>
-              <div className='w-fit mx-auto'>
-                <div className='menButtonBorder w-[40%] h-[2px] bg-[#74523f] mx-auto'></div>
+              <div className='w-fit mx-auto group'>
+                <div className='buttonBorder w-[40%] h-[2px] bg-yellow-800 mx-auto group-hover:w-4/5 transition-all duration-200'></div>
                 <Link to='/men'>
-                  <button className='menButton bg-[#020202] font-sen text-[#74523f] px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200'>
+                  <button className='button font-inter text-[#e0e0e0] px-4 md:px-8 py-2 md:py-4 md:text-2xl hover:bg-white/10 rounded-lg hover:tracking-[2px] transition-all duration-200'>
                     PRZEGLĄDAJ
                   </button>
                 </Link>
-                <div className='menButtonBorder w-[40%] h-[2px] bg-[#74523f] mx-auto'></div>
+                <div className='buttonBorder w-[40%] h-[2px] bg-[silver] mx-auto group-hover:w-4/5 transition-all duration-200'></div>
               </div>
               {/* <Link to="/men"><button className=" font-sen border-[2px] border-[#74523f] text-[#74523f] px-8 py-4 text-2xl hover:rounded-2xl transition-all duration-200">PRZEGLĄDAJ</button></Link> */}
               <p className='w-[70%] mx-auto text-justify text-[#e0e0e0] font-poppins text-lg'>
@@ -240,14 +218,14 @@ const Header = () => {
               <h1 className=' font-inter font-[200] text-5xl lg:text-7xl text-[#74523f]'>
                 KOBIETA
               </h1>
-              <div className='w-fit mx-auto'>
-                <div className='womenButtonBorder w-[40%] h-[2px] bg-gray-950 mx-auto'></div>
+              <div className='w-fit mx-auto group'>
+                <div className='buttonBorder w-[40%] h-[2px] bg-gray-800 mx-auto group-hover:w-4/5 transition-all duration-200'></div>
                 <Link to='/women'>
-                  <button className='womenButton bg-[rgb(223,223,223)] font-sen text-gray-950 px-8 py-4 text-2xl hover:tracking-[2px] transition-all duration-200'>
+                  <button className='button font-inter text-[#000000] px-4 md:px-8 py-2 md:py-4 md:text-2xl hover:bg-black/10 rounded-lg hover:tracking-[2px] transition-all duration-200'>
                     PRZEGLĄDAJ
                   </button>
                 </Link>
-                <div className='womenButtonBorder w-[40%] h-[2px] bg-gray-950 mx-auto'></div>
+                <div className='buttonBorder w-[40%] h-[2px] bg-gray-800 mx-auto group-hover:w-4/5 transition-all duration-200'></div>
               </div>
               <p className='w-[70%] mx-auto text-justify font-poppins text-lg'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
@@ -283,7 +261,7 @@ const Header = () => {
             ]}
             speed={70}
             repeat={Infinity}
-            className=' mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto lg:text-justify text-clip text-[#7a4527] text-2xl lg:text-4xl font-sen tracking-[6px] leading-9 lg:leading-[40px]'
+            className=' mt-6 markPasswordContent w-[95%] absolute top-0 mx-auto lg:text-justify text-clip text-gray-600 text-2xl lg:text-4xl font-sen tracking-[6px] leading-9 lg:leading-[40px]'
           />
         </div>
       </div>
