@@ -179,3 +179,20 @@ textarea::placeholder {
   background: linear-gradient(0deg, black, rgba(0,0,0,.3)), url("https://images.unsplash.com/photo-1484663548870-2aa675ba38fb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center;
 }
+
+.scroller:hover .scrollerArrow{
+  animation: arrowAnimate 0.6s both;
+}
+
+@keyframes arrowAnimate {
+  0%{
+    position: relative;
+  }
+
+  50%{
+    top: 20%;
+  }
+  100%{
+    top:50%;
+  }
+}

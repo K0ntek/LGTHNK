@@ -62,6 +62,14 @@ const CategoryProducts =({id})=>{
 
       useEffect(()=>{
         gsap.registerPlugin(ScrollTrigger)
+
+       let imagePrdoducts = document.querySelectorAll(".image")
+      //  let startImage = document.querySelectorAll(".startImage")
+       imagePrdoducts.forEach(image => {
+        gsap.fromTo(image, {scale:1.7}, {scale:1, duration:.5, scrollTrigger:{trigger:image, start:'top 60%', end: 'top ', scrub:2}})
+       });
+
+
         let products = document.querySelectorAll('.productElement')
         products.forEach(product => {
             // gsap.set(product, {opacity:0, scrollTrigger:{trigger:product, start:'top 150%'}})
@@ -81,7 +89,7 @@ const CategoryProducts =({id})=>{
           categoryImages.forEach((image, i) => {
             if(id+1 == image.id){
               startImage.push(
-                    <img src={image.startImage} alt="dasasd" className="rounded-[40px] hover:scale-125 transition-all duration-150"/>
+                    <img src={image.startImage} alt="dasasd" className="image rounded-[40px] hover:scale-125 transition-all duration-150"/>
               )
               endImage.push(
                     <img src={image.endImage} alt="dasasd" className="rounded-[40px] object-cover h-full w-full hover:scale-125 transition-all duration-150"/>
