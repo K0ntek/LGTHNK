@@ -35,14 +35,14 @@ const ProductsInBag = () => {
 
             {data.map((product)=>{
                 return(
-                    <div className="w-full font-inter">
+                    <div className="max-w-[500px] font-inter mx-auto justify-center">
                         <div key={product.id} className=' my-7 flex space-x-4 relative'>
                         <IoMdClose className="absolute right-2 top-[50%] translate-y-[-50%] hover:text-red-600" />
                         <img src={product.image} alt={product.title} className='w-[60px] h-[60px] aspect-[1/1] rounded-full'/>
                         <div>
                             <div  className=' relative top-[50%] translate-y-[-50%]'>
                                 <div className="flex space-x-4">
-                                <div className=" w-1/2 md:w-3/4 overflow-hidden"><h1 className='text-lg whitespace-nowrap'>{product.title}</h1></div>
+                                <div className=" w-1/2 overflow-hidden"><h1 className='text-lg whitespace-nowrap'>{product.title}</h1></div>
                                 <p className=' text-lg w-1/4'>{product.price}PLN</p>
                                 </div>
                                 <div className='flex space-x-4'>
