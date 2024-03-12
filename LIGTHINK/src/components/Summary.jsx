@@ -7,7 +7,7 @@ const Summary = () => {
       <div className=" grid lg:grid-cols-2">
 
         <div className='w-[90%] mx-auto py-7'>
-          <h1 className=' font-inter text-5xl mb-7 text-center'>PODSUMOWANIE</h1>
+          <h1 className=' font-inter text-3xl sm:text-5xl mb-7 text-center'>PODSUMOWANIE</h1>
           <h1 className='text-center text-xl mt-4'>DO ZAPŁATY: 1000PLN</h1>
           <div className=' mx-auto h-[400px] overflow-y-scroll '>
             <ProductsInBag />
