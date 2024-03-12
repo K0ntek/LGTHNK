@@ -14,7 +14,7 @@ const Summary = () => {
           </div>
         </div>
 
-        <div className='w-[60%] mx-auto py-7'>
+        <div className='w-[80%] md:w-[60%] mx-auto py-7'>
           <form>
             <div className=' space-y-10'>
               <div className="grid grid-cols-2 gap-4">
