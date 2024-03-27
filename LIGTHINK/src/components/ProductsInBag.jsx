@@ -42,7 +42,7 @@ const ProductsInBag = () => {
                             <div>
                                 <div className=' relative top-[50%] translate-y-[-50%]'>
                                     <div className="flex space-x-4">
-                                        <div className=" w-1/2 overflow-hidden"><h1 className='text-lg whitespace-nowrap'>{product.title}</h1></div>
+                                        <div className=" w-[300px] overflow-hidden"><h1 className='text-lg whitespace-nowrap'>{product.title}</h1></div>
                                         <p className=' text-lg w-1/4'>{product.price}PLN</p>
                                     </div>
                                     <div className='flex space-x-4'>
